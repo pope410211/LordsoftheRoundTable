@@ -18,19 +18,25 @@ body {
     }
     .nvbr {
 
+      ul{
+      margin: 8em 0 0 8em;
+
+}
 
      li{
        list-style: none;
 
+
     }
 
-    #base1{
+    #base1 li{
       float: left;
+      margin: 1em;
 
   }
-    #Log1{
+    #Log1 li{
       float: left;
-      display: inline-block;
+      margin: 1em;
     }
     }
 }

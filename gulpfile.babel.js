@@ -139,7 +139,8 @@ gulp.task('serve:dist', () => {
         '/bower_components': 'bower_components',
         '/api': 'api'
       }
-    }
+    },
+    directory: true
   });
 });
 

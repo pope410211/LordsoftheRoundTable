@@ -137,8 +137,10 @@ gulp.task('serve:test', () => {
       baseDir: 'test',
       routes: {
         '/bower_components': 'bower_components'
+        '/api': 'api'
       }
-    }
+    },
+    directory: true
   });
 
   gulp.watch('test/spec/**/*.js').on('change', reload);

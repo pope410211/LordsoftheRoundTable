@@ -1,8 +1,8 @@
-/* global angular _ Firebase */
+/* global angular */
 (function(){
-  "use strict"
+  'use strict';
 
-  angular.module('LordsoftheRoundTable', ['restangular']);
+  angular.module('LordsoftheRoundTable', ['restangular', 'ui.router']);
   console.log();
 
 

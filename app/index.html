@@ -38,9 +38,9 @@
 <div>
   <nav class="nvbr row">
     <ul class="nav1" id="base1">
-      <li>HOME</li>
-      <li>ABOUT US</li>
-      <li>  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FIND GAMES</a>
+      <li><a ui-sref="home">HOME</a></li>
+      <li><a ui-sref="about">ABOUT US</a></li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FIND GAMES</a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -51,8 +51,8 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
       </li>
-      <li> BLOG </li>
-      <li> COMMUNITY </li>
+      <li><a ui-sref="blog"> BLOG </a></li>
+      <li><a ui-sref="community"> COMMUNITY </a> </li>
     </ul>
   <div>
     <input type="text" class="search" placeholder="Search">

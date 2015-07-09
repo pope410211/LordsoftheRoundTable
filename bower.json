@@ -1,12 +1,29 @@
 {
   "name": "lordsoftheroundtable",
-  "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.4",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "angular": "~1.4.2",
+    "restangular": "~1.5.1",
+    "angularfire": "~1.1.2",
+    "firebase": "~2.2.7"
   },
   "devDependencies": {
     "chai": "~3.0.0",
     "mocha": "~2.2.5"
-  }
+  },
+  "version": "0.0.1--Stat-Roll",
+  "homepage": "https://github.com/pope410211/LordsoftheRoundTable",
+  "authors": [
+    "Nick Pope <pope410211@gmail.com>"
+  ],
+  "description": "Gamer/Group Matching service",
+  "license": " ",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

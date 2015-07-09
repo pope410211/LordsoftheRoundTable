@@ -12,11 +12,8 @@ const reload = browserSync.reload;
 var inject = require('gulp-inject');
 
 gulp.task('inject', function () {
-  var target = gulp.src('./app/index.html');
-  // from https://www.npmjs.com/package/gulp-inject
-  var sources = gulp.src(['./app/**/*.js'], {read: false});
-
-  return target.pipe(inject(sources))
+  gulp.src('./app/**/*.html')
+    .pipe(inject(gulp.src('./app/**/*.js', {read: false}), {relative: true}))
     .pipe(gulp.dest('./app'));
 });
 

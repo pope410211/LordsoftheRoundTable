@@ -39,7 +39,7 @@
   },
   "name": "lordsoftheroundtable",
   "description": "Gamer/Group matching service",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "gulpfile.babel.js",
   "directories": {
     "test": "test"
@@ -75,7 +75,7 @@
     "url": "git+https://github.com/pope410211/LordsoftheRoundTable.git"
   },
   "author": "Nick Pope (pope410211)",
-  "license": "ISC",
+  "license": " ",
   "bugs": {
     "url": "https://github.com/pope410211/LordsoftheRoundTable/issues"
   },

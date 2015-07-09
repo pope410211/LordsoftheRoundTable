@@ -8,13 +8,13 @@
     "chai": "~3.0.0",
     "mocha": "~2.2.5"
   },
-  "version": "0.0.0--Character-Sheet",
+  "version": "0.0.1--Stat-Roll",
   "homepage": "https://github.com/pope410211/LordsoftheRoundTable",
   "authors": [
     "Nick Pope <pope410211@gmail.com>"
   ],
   "description": "Gamer/Group Matching service",
-  "license": "MIT",
+  "license": " ",
   "ignore": [
     "**/.*",
     "node_modules",

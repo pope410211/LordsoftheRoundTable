@@ -19,11 +19,14 @@ body {
     }
 
     .login{
+
+      margin-left: 48em;
       clear: both;
       #Log1 li{
         float: left;
         margin: 1em;
         list-style: none;
+        font-size: .90em;
 
       }
     }
@@ -31,6 +34,7 @@ body {
 
       ul{
       margin: 3em 0 0 10em;
+      clear: both;
 
 }
 
@@ -46,7 +50,6 @@ body {
 
   }
   .search {
-    margin-top: 1.5em;
     margin-left: 1em;
   }
 

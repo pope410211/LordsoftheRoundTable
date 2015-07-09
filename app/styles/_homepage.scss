@@ -2,6 +2,7 @@ body {
   background-image: url("/images/lotrt-bg.png");
   max-width: 100%;
   font-family: Garamond, serif;
+  color: #472F17;
 
   .container-fluid{
     max-width: 70%;
@@ -13,9 +14,9 @@ body {
       margin: 2em;
       width: 8em;
       height: 8em;
-      position: fixed;
+      position: absolute;
     }
-    .navbar {
+    .nvbr {
 
 
      li{
@@ -24,7 +25,6 @@ body {
     }
 
     #base1{
-      display: inline-block;
       float: left;
 
   }

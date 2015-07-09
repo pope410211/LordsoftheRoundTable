@@ -8,6 +8,18 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+
+var inject = require('gulp-inject');
+
+gulp.task('inject', function () {
+  var target = gulp.src('./app/index.html');
+  // from https://www.npmjs.com/package/gulp-inject
+  var sources = gulp.src(['./app/**/*.js'], {read: false});
+
+  return target.pipe(inject(sources))
+    .pipe(gulp.dest('./app'));
+});
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())

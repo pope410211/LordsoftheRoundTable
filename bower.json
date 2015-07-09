@@ -1,6 +1,5 @@
 {
   "name": "lordsoftheroundtable",
-  "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.4",
     "modernizr": "~2.8.1"
@@ -8,5 +7,19 @@
   "devDependencies": {
     "chai": "~3.0.0",
     "mocha": "~2.2.5"
-  }
+  },
+  "version": "0.0.0--Character-Sheet",
+  "homepage": "https://github.com/pope410211/LordsoftheRoundTable",
+  "authors": [
+    "Nick Pope <pope410211@gmail.com>"
+  ],
+  "description": "Gamer/Group Matching service",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

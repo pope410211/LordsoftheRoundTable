@@ -12,7 +12,7 @@ body {
 
   main {
     .goldlogo{
-      margin: 2em;
+      margin: 3em;
       width: 8em;
       height: 8em;
       position: absolute;
@@ -27,20 +27,25 @@ body {
         margin: 1em;
         list-style: none;
         font-size: .90em;
-
+        position: relative;
+        margin-top: 4em;
       }
     }
     .nvbr {
+      margin-bottom: 2em;
+
 
       ul{
-      margin: 3em 0 0 10em;
+      margin: 5em 0 0 10em;
       clear: both;
+      position: absolute;
 
 }
 
      li{
        list-style: none;
        font-size: .90em;
+       display: inline-block;
 
     }
 
@@ -50,7 +55,8 @@ body {
 
   }
   .search {
-    margin-left: 1em;
+    margin-left: 52em;
+    border-radius: 1em
   }
 
     }

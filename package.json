@@ -3,6 +3,7 @@
     "node": ">=0.12.0"
   },
   "devDependencies": {
+    "annotate": "^0.9.1",
     "babel": "^5.5.6",
     "browser-sync": "^2.2.1",
     "del": "^1.1.1",
@@ -22,6 +23,7 @@
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^1.1.1",
     "main-bower-files": "^2.5.0",
+    "ng-annotate": "^1.0.1",
     "opn": "^1.0.1",
     "wiredep": "^2.2.2"
   },

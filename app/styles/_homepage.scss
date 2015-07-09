@@ -2,6 +2,7 @@ body {
   background-image: url("/images/lotrt-bg.png");
   max-width: 100%;
   font-family: Garamond, serif;
+  font-size: 14px;
   color: #472F17;
 
   .container-fluid{
@@ -16,28 +17,39 @@ body {
       height: 8em;
       position: absolute;
     }
+
+    .login{
+      clear: both;
+      #Log1 li{
+        float: left;
+        margin: 1em;
+        list-style: none;
+
+      }
+    }
     .nvbr {
 
       ul{
-      margin: 8em 0 0 8em;
+      margin: 3em 0 0 10em;
 
 }
 
      li{
        list-style: none;
-
+       font-size: .90em;
 
     }
 
     #base1 li{
       float: left;
-      margin: 1em;
+      margin: 2em;
 
   }
-    #Log1 li{
-      float: left;
-      margin: 1em;
-    }
+  .search {
+    margin-top: 1.5em;
+    margin-left: 1em;
+  }
+
     }
 }
 }

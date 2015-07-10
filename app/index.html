@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="LordsoftheRoundTable as lotrt">
+<html class="no-js" lang="en" ng-app="routerAPP">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -24,7 +24,7 @@
   </head>
   <body>
 
-<main class="container-fluid" ng-app="MainController as app">
+<main class="container-fluid" >
 
   <a href="#"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
   <div class="login">
@@ -59,6 +59,10 @@
   </div>
 </nav>
 </div>
+
+<div ui-view></div>
+
+
 </main>
 
     <!-- build:js scripts/vendor.js -->

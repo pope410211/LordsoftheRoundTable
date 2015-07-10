@@ -1,12 +1,12 @@
-/* global angular */
-(function(){
-  'use strict';
-
-  angular.module('LordsoftheRoundTable')
-
-  .controller('MainController', function(){
-
-
-  });
-
-})();
+// /* global angular */
+// (function(){
+//   'use strict';
+//
+//   angular.module('routerAPP')
+//
+//   .controller('MainController', function(){
+//
+//
+//   });
+//
+// })();

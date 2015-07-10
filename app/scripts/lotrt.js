@@ -2,25 +2,27 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('LordsoftheRoundTable', ['restangular', 'ui.router']);
+var routerAPP = angular.module('routerAPP', ['ui.router']);
 
 // http://www.funnyant.com/angularjs-ui-router/
-lotrt.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+routerAPP.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/404')
 
   $stateProvider
       .state('home', {
-        url: '/',
-          templateUrl: '/views/home.html',
-          controller: 'HomeController'
+        url: '/home',
+          templateUrl: '/views/home.html'
+          // controller: 'HomeController'
+          // console.log(home);
       })
       .state('about', {
         url: '/about',
           templateUrl: 'templates/about.html',
           controller: 'AboutController'
-      });
+      })
+      .state('')
 
-}]);
+});
 
 
 

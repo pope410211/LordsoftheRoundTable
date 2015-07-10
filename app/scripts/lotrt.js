@@ -10,15 +10,15 @@ lotrt.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 
   $stateProvider
       .state('home', {
-          url:'/',
-          templateUrl: 'templates/home.html',
+        url: '/',
+          templateUrl: '/views/home.html',
           controller: 'HomeController'
       })
       .state('about', {
-          url:'/about',
+        url: '/about',
           templateUrl: 'templates/about.html',
           controller: 'AboutController'
-      })
+      });
 
 }]);
 

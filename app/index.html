@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="LordsoftheRoundTable as lotrt">
+<html class="no-js" lang="en" ng-app="routerAPP">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LordsoftheRoundTable</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/lotrttab.ico" type="image/x-icon">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -24,11 +24,45 @@
   </head>
   <body>
 
-<main id="paperbg">
-    <ul class="test1">
-      <li class-"test2">1</li>
-      <li class-"test2">2</li>
+<main class="container-fluid" >
+
+  <a href="#" ui-sref="home"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
+  <div class="login">
+  <nav>
+    <ul class="nav2" id="Log1">
+    <li> LOGIN </li>
+    <li> SIGN UP </li>
+  </ul>
+</nav>
+</div>
+<div>
+  <nav class="nvbr row">
+    <ul class="nav1" id="base1">
+      <li><a ui-sref="home">HOME</a></li>
+      <li><a ui-sref="about">ABOUT US</a></li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FIND GAMES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+      </li>
+      <li><a ui-sref="blog"> BLOG </a></li>
+      <li><a ui-sref="community"> COMMUNITY </a> </li>
     </ul>
+  <div>
+    <input type="text" class="search" placeholder="Search">
+  </div>
+</nav>
+</div>
+
+<div ui-view></div>
+
+
 </main>
 
     <!-- build:js scripts/vendor.js -->
@@ -39,6 +73,7 @@
     <script src="/bower_components/restangular/dist/restangular.js"></script>
     <script src="/bower_components/firebase/firebase.js"></script>
     <script src="/bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -60,6 +95,7 @@
 
     <!-- inject:js -->
     <script src="scripts/lotrt.js"></script>
+    <script src="scripts/controllers/maincontroller.js"></script>
     <!-- endinject -->
   </body>
 </html>

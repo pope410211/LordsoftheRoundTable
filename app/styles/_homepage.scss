@@ -1,0 +1,81 @@
+body {
+  background-image: url("/images/lotrt-bg.png");
+  max-width: 100%;
+  font-family: Garamond, serif;
+  font-size: 14px;
+  color: #472F17;
+
+ a {
+  text-decoration: none;
+  color: #472F17;
+
+  &:hover{
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+
+
+  .container-fluid{
+    max-width: 70%;
+    background-image: url("/images/ricepaper.png");
+  }
+
+  main {
+    .goldlogo{
+      margin: 3em;
+      width: 8em;
+      height: 8em;
+      position: absolute;
+    }
+
+
+    .login{
+
+      margin-left: 48em;
+      clear: both;
+      #Log1 li{
+        float: left;
+        margin: 1em;
+        list-style: none;
+        font-size: .90em;
+        position: relative;
+        margin-top: 4em;
+        @extend a;
+      }
+    }
+    .nvbr {
+      margin-bottom: 2em;
+
+
+
+      ul{
+      margin: 5em 0 0 10em;
+      clear: both;
+      position: absolute;
+
+}
+
+     li{
+       list-style: none;
+       font-size: .90em;
+       display: inline-block;
+
+
+
+    }
+
+    #base1 li{
+      float: left;
+      margin: 2em;
+
+  }
+  .search {
+    margin-left: 52em;
+    border-radius: 1em
+  }
+
+    }
+}
+}

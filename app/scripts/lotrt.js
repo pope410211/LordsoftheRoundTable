@@ -6,7 +6,7 @@ var routerAPP = angular.module('routerAPP', ['ui.router']);
 
 // http://www.funnyant.com/angularjs-ui-router/
 routerAPP.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home')
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
       .state('home', {
@@ -17,7 +17,7 @@ routerAPP.config(function($stateProvider, $urlRouterProvider) {
       })
       .state('about', {
         url: '/about/kick/butt',
-          templateUrl: 'views/about.html',
+          templateUrl: 'views/about.html'
           // controller: 'AboutController'
       })
       .state('blog', {

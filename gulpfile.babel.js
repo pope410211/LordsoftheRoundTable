@@ -11,9 +11,9 @@ const reload = browserSync.reload;
 var ngAnnotate = require('gulp-ng-annotate');
 
 gulp.task('ng-annotate', function(){
-  return gulp.src('app/scripts/*.js')
+  return gulp.src('app/scripts/**/*.js')
     .pipe(ngAnnotate())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/scripts/'));
 });
 
 var inject = require('gulp-inject');
@@ -185,7 +185,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['ng-annotate', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

@@ -8,6 +8,13 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+var ngAnnotate = require('gulp-ng-annotate');
+
+gulp.task('ng-annotate', function(){
+  return gulp.src('app/scripts/*.js')
+    .pipe(ngAnnotate())
+    .pipe(gulp.dest('dist'));
+});
 
 var inject = require('gulp-inject');
 
@@ -60,6 +67,7 @@ gulp.task('html', ['styles'], () => {
 
   return gulp.src('app/**/*.html')
     .pipe(assets)
+    .pipe($.if('*.js', ngAnnotate()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())

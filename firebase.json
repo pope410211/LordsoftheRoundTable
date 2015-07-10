@@ -1,6 +1,6 @@
 {
   "firebase": "lordsoftheroundtable",
-  "public": ".",
+  "public": "./dist",
   "ignore": [
     "firebase.json",
     "**/.*",

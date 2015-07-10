@@ -16,11 +16,10 @@ routerAPP.config(function($stateProvider, $urlRouterProvider) {
           // console.log(home);
       })
       .state('about', {
-        url: '/about',
-          templateUrl: 'templates/about.html',
-          controller: 'AboutController'
-      })
-      .state('')
+        url: '/about/kick/butt',
+          templateUrl: 'views/about.html',
+          // controller: 'AboutController'
+      });
 
 });
 

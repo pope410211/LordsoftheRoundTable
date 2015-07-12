@@ -4,10 +4,10 @@
 
 var lotrt = angular.module('lotrt', ['ngRoute']);
   lotrt.config(function($routeProvider) {
-  $routeProvider.otherwise('/home');
+  // $routeProvider.otherwise('/home');
 
   $routeProvider
-    .when('/home', {
+        .when('/home', {
         templateUrl: 'views/home.html'
       })
     .when('/about', {
@@ -24,13 +24,10 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         url: 'try/the/koolaid',
           templateUrl: 'views/community.html'
       })
-      otherwise{
-        redirectTo: '/404',
-        templateUrl: 'views/404.html'
-      }
+    
   });
 
-});
+
 
 
 

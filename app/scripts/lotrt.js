@@ -2,21 +2,19 @@
 (function(){
   'use strict';
 
-angular.module('lotrt', ['ngRoute']);
-  .config(function($routeProvider) {
+var lotrt = angular.module('lotrt', ['ngRoute']);
+  lotrt.config(function($routeProvider) {
   $routeProvider.otherwise('/home');
 
-  $routeProvider.when('/home', {
-        url: '/home',
-          templateUrl: '/views/home.html'
-          // controller: 'HomeController'
-          // console.log(home);
-      });
-      $routeProvider.when('/about', {
-        url: '/about/kick/butt',
-          templateUrl: 'views/about.html'
-          // controller: 'AboutController'
-      });
+  $routeProvider
+    .when('/home', {
+        templateUrl: 'views/home.html'
+      })
+    .when('/about', {
+        templateUrl: 'views/about.html'
+        // controller: 'QuestionsController',
+        // controllerAs: 'questions'
+      })
       .when('/blog', {
         url: '/blogwon',
           templateUrl: 'views/blog.html'
@@ -26,13 +24,10 @@ angular.module('lotrt', ['ngRoute']);
         url: 'try/the/koolaid',
           templateUrl: 'views/community.html'
       })
-      .when('otherwise', {
-      abstract: true,
+      otherwise{
+        redirectTo: '/404',
         templateUrl: 'views/404.html'
-  })
-      .when('otherwise.404', {
-      url: '/',
-        templateUrl: 'views/404.html'
+      }
   });
 
 });

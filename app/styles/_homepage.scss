@@ -16,13 +16,16 @@ body {
 
   main {
 
+
 .goldlogo{
       width: 8em;
       height: 8em;
-      clear: both;
+      margin: 2em;
+      float: left;
     }
     ul{
-    clear: both;
+    float: left;
+    padding-top: 4em;
     }
 
     a {

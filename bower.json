@@ -7,7 +7,7 @@
     "restangular": "~1.5.1",
     "angularfire": "~1.1.2",
     "firebase": "~2.2.7",
-    "angular-ui-router": "~0.2.15"
+    "angular-route": "~1.4.2"
   },
   "devDependencies": {
     "chai": "~3.0.0",

@@ -16,15 +16,13 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         // controllerAs: 'questions'
       })
       .when('/blog', {
-        url: '/blogwon',
           templateUrl: 'views/blog.html'
       })
 
       .when('/community', {
-        url: 'try/the/koolaid',
           templateUrl: 'views/community.html'
-      })
-    
+      });
+
   });
 
 

@@ -17,10 +17,14 @@ body {
   main {
 
 .goldlogo{
-      margin: 3em;
       width: 8em;
       height: 8em;
+      clear: both;
     }
+    ul{
+    clear: both;
+    }
+
     a {
       cursor: pointer;
       color: inherit;
@@ -30,5 +34,32 @@ body {
 
     }
   }
+
+  .csearch {
+    border-radius: 1em;
+  }
+
+  ::-webkit-input-placeholder {
+   color: #472F17;
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #472F17;
+   text-align: center;
+
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #472F17;
+   text-align: center;
+
+}
+
+:-ms-input-placeholder {
+   color: #472F17;
+   text-align: center;
+
+}
     }
   } //end

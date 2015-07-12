@@ -2,40 +2,39 @@
 (function(){
   'use strict';
 
-var routerAPP = angular.module('routerAPP', ['ui.router']);
+angular.module('lotrt', ['ngRoute']);
 
 // http://www.funnyant.com/angularjs-ui-router/
-routerAPP.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home');
+.config(function($routeProvider) {
+  $routeProvider.otherwise('/home');
 
-  $stateProvider
-      .state('home', {
+  $routeProvider
+      .when('home', {
         url: '/home',
           templateUrl: '/views/home.html'
           // controller: 'HomeController'
           // console.log(home);
       })
-      .state('about', {
+      .when('about', {
         url: '/about/kick/butt',
           templateUrl: 'views/about.html'
           // controller: 'AboutController'
       })
-      .state('blog', {
+      .when('blog', {
         url: '/blogwon',
           templateUrl: 'views/blog.html'
       })
 
-      .state('community', {
+      .when('community', {
         url: 'try/the/koolaid',
           templateUrl: 'views/community.html'
       })
-      // http://stackoverflow.com/questions/23281351/angular-ui-router-handling-404s // for the 404
-      .state('otherwise', {
+      .when('otherwise', {
       abstract: true,
         templateUrl: 'views/404.html'
   })
-      .state('otherwise.404', {
-      url: '*path',
+      .when('otherwise.404', {
+      url: '/',
         templateUrl: 'views/404.html'
   });
 

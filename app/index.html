@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="routerAPP">
+<html class="no-js" lang="en" ng-app="lotrt">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -24,44 +24,26 @@
   </head>
   <body>
 
-<main class="container-fluid" >
 
-  <a href="#" ui-sref="home"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
-  <div class="login">
+<main class="container-fluid">
+<div id="logo1">
+  <a href="#"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
+  </div>
   <nav>
-    <ul class="nav2" id="Log1">
-    <li> LOGIN </li>
-    <li> SIGN UP </li>
+  <ul class="nav nav-pills">
+    <li role="presentation"> </li>
+    <li role="presentation"><a href="#/home">HOME</a></li>
+    <li role="presentation"><a href="#/about">ABOUT US</a></li>
+    <li role="presentation"><a href="#">FIND GAMES</a></li>
+    <li role="presentation"><a href="#/blog">BLOG</a></li>
+    <li role="presentation"><a href="#/community">COMMUNITY</a></li>
+    <li role="presentation"><input class="csearch" placeholder="SEARCH"</li>
+    <li role="presentation"><a href="#/login">LOGIN</a></li>
   </ul>
 </nav>
-</div>
-<div>
-  <nav class="nvbr row">
-    <ul class="nav1" id="base1">
-      <li><a ui-sref="home">HOME</a></li>
-      <li><a ui-sref="about">ABOUT US</a></li>
-      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FIND GAMES</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-      </li>
-      <li><a ui-sref="blog"> BLOG </a></li>
-      <li><a ui-sref="community"> COMMUNITY </a> </li>
-    </ul>
-  <div>
-    <input type="text" class="search" placeholder="Search">
-  </div>
-</nav>
-</div>
-
-<div ui-view></div>
-
+</main>
+<main class="container-fluid">
+<div class="container" ng-view></div>
 
 </main>
 
@@ -73,7 +55,7 @@
     <script src="/bower_components/restangular/dist/restangular.js"></script>
     <script src="/bower_components/firebase/firebase.js"></script>
     <script src="/bower_components/angularfire/dist/angularfire.js"></script>
-    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

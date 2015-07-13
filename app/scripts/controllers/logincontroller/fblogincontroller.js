@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginController', function(){
+  .controller('LoginControllerFb', function(){
 
 
     var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');

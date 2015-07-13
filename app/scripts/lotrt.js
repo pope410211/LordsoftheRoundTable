@@ -24,7 +24,10 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
       })
       .when('/login',{
         templateUrl: 'views/login.html'
-      });
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html'
+      })
 
   });
 

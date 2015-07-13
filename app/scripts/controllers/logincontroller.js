@@ -34,10 +34,6 @@ function authDataCallback(authData) {
 firebaseFB.onAuth(authDataCallback);
 
 
-
-
-
-
 function getName(authData) {
   switch(authData.provider) {
      case 'password':

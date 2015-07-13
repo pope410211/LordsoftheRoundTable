@@ -23,12 +23,12 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         templateUrl: 'views/community.html'
         // authRequired: true
       })
-      .when('/login',{
+      .when('/login', {
         templateUrl: 'views/login.html'
       })
       .when('/signup', {
         templateUrl: 'views/signup.html'
-      })
+      });
 
   });
 

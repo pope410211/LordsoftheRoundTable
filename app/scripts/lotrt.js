@@ -11,28 +11,28 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         templateUrl: 'views/home.html'
       })
     .when('/about', {
-        templateUrl: 'views/about.html'
-  
+        templateUrl: 'views/comm/about.html'
+
       })
       .when('/blog', {
-          templateUrl: 'views/blog.html'
+          templateUrl: 'views/comm/blog.html'
       })
       .when('/community', {
-        templateUrl: 'views/community.html'
+        templateUrl: 'views/comm/community.html'
         // authRequired: true
       })
       .when('/login', {
-        templateUrl: 'views/login.html'
+        templateUrl: 'views/user/login.html'
       })
       .when('/signup', {
-        templateUrl: 'views/signup.html',
+        templateUrl: 'views/user/signup.html',
         controller: 'LoginController',
         controllerAs: 'login'
       })
       .when('/loginFB', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginController',
-        controllerAs: 'login'
+        templateUrl: 'views/user/login.html',
+        controller: 'LoginControllerFb',
+        controllerAs: 'fblogin'
       });
 
   });

@@ -27,7 +27,14 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         templateUrl: 'views/login.html'
       })
       .when('/signup', {
-        templateUrl: 'views/signup.html'
+        templateUrl: 'views/signup.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+      })
+      .when('/loginFB', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
       });
 
   });

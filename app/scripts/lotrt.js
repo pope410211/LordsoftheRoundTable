@@ -20,8 +20,8 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
       })
 
       .when('/community', {
-        templateUrl: 'views/community.html',
-        authRequired: true
+        templateUrl: 'views/community.html'
+        // authRequired: true
       })
       .when('/login',{
         templateUrl: 'views/login.html'

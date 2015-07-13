@@ -7,7 +7,7 @@
   .controller('LoginController', function(){
 
 
-    var firebaseFB = new Firebase('https://lordsoftheroundtable.firebaseio.com');
+    var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
 
 
 firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {

@@ -30,7 +30,7 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         controllerAs: 'login'
       })
       .when('/loginFB', {
-        templateUrl: 'views/user/login.html',
+        templateUrl: 'views/user/profiles/profile.html',
         controller: 'LoginControllerFb',
         controllerAs: 'fblogin'
       });

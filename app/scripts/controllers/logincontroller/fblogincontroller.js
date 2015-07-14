@@ -15,7 +15,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
     console.log('Login Failed!', error);
   } else {
     // the access token will allow us to make Open Graph API calls
-    // console.log(authData.facebook.accessToken);
+    console.log(authData.facebook.accessToken);
   }
 }, {
   remember: 'sessionOnly',
@@ -26,7 +26,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
 
 function authDataCallback(authData) {
   if (authData) {
-    // console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
+    console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
   } else {
     console.log('User is logged out');
   }
@@ -75,10 +75,10 @@ function getName(authData) {
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
-       console.log('yay');
+       console.log('yay', data, status, headers, config);
      }).
      error(function(data, status, headers, config) {
-       console.log('boo');
+       console.log('boo', data, status, headers, config);
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });

@@ -61,8 +61,8 @@ function getName(authData) {
 var authData = firebaseFB.getAuth();
 
 if (authData) {
-  console.log("Authenticated user with uid:", authData.uid);
-}; // end .getAuth
+  console.log('Authenticated user with uid:', authData.uid);
+} // end .getAuth
 
 }); //end .controller('LoginController')
 

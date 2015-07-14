@@ -57,6 +57,13 @@ function getName(authData) {
      }
      console.log('work');
    }); //end newUser Auth
+
+var authData = firebaseFB.getAuth();
+
+if (authData) {
+  console.log("Authenticated user with uid:", authData.uid);
+}; // end .getAuth
+
 }); //end .controller('LoginController')
 
 

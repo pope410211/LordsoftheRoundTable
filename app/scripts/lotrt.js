@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('lotrt', ['ngRoute']);
+var lotrt = angular.module('lotrt', ['ngRoute', 'restangular']);
   lotrt.config(function($routeProvider) {
   // $routeProvider.otherwise('/home');
 

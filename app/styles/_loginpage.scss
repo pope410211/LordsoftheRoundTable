@@ -1,28 +1,17 @@
-#logmain1 {
-  clear: both;
-  max-width: 45%;
-  margin: 0;
-  float: left;
+.fbLogin {
+  background-color: #334E88;
+  border-style: none;
+  font-size: 2em;
+  width: 5em;
+  font-family: inherit;
 
 
-.form-login {
-  border-radius: 1em;
-  box-sizing: border-box;
-  margin: 1em;
-  }
+   a{
+    color: white;
 
 
-
-
-}//end logmain1
-#lcor {
-  max-width: 10%;
-  float: left;
-  margin-left: 10%;
-  margin-top: 10%;
+    &:hover{
+      text-decoration: none;
 }
-
-#lcfb {
-  margin: 2em;
-
+}
 }

@@ -55,33 +55,34 @@ function getName(authData) {
          name: getName(authData)
        });
      }
-    //  console.log('gots the data' + authData.token);
+    //  console.log('gots the data');
    }); //end newUser Auth
 
+   var authDataI = firebaseFB.getAuth();
+
+   if (authDataI) {
+    //  console.log('Authenticated user with uid:', authDataI.uid);
+   } // end .getAuth
 
 
+   var token = firebaseFB.onAuth(function(authData) {
+        if (authData) {
+          return (authData.token);
+        }
+        console.log('gots the data' + authData.token);
 
-
-
-var token = firebaseFB.onAuth(function(authData) {
-     if (authData) {
-       return (authData.token)
-      }
-    //  console.log('gots the data' + authData.token);
-
-
-   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token='+ token +'&fields=picture{height,width,url},age_range,birthday,location').
+   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token=' + token + '&fields=picture{height,width,url},age_range,birthday,location').
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
-       console.log(success);
+       console.log('yay');
      }).
      error(function(data, status, headers, config) {
        console.log('boo');
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });
-   });
+});
 
 }); //end .controller('LoginController')
 

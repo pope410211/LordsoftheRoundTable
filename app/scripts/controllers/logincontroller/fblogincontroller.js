@@ -15,7 +15,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
     console.log('Login Failed!', error);
   } else {
     // the access token will allow us to make Open Graph API calls
-    console.log(authData.facebook.accessToken);
+    // console.log(authData.facebook.accessToken);
   }
 }, {
   remember: 'sessionOnly',
@@ -26,7 +26,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
 
 function authDataCallback(authData) {
   if (authData) {
-    console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
+    // console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
   } else {
     console.log('User is logged out');
   }
@@ -55,34 +55,33 @@ function getName(authData) {
          name: getName(authData)
        });
      }
-     console.log('gots the data');
+    //  console.log('gots the data' + authData.token);
    }); //end newUser Auth
 
-   var authDataI = firebaseFB.getAuth();
-
-   if (authDataI) {
-     console.log('Authenticated user with uid:', authDataI.uid);
-   } // end .getAuth
 
 
-function token(authData) {
-  if (authData){
-    return (authData.token)
-    console.log('Oh yea ' + authData.token)
-  }
-}
-   $http.get('https://graph.facebook.com/v2.4/me?access_token='+ token +'&fields=picture{height,width,url},age_range,birthday,location').
+
+
+
+var token = firebaseFB.onAuth(function(authData) {
+     if (authData) {
+       return (authData.token)
+      }
+    //  console.log('gots the data' + authData.token);
+
+
+   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token='+ token +'&fields=picture{height,width,url},age_range,birthday,location').
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
-       console.log('yay');
+       console.log(success);
      }).
      error(function(data, status, headers, config) {
        console.log('boo');
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });
-
+   });
 
 }); //end .controller('LoginController')
 

@@ -19,7 +19,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
   }
 }, {
   remember: 'sessionOnly',
-  scope: 'public_profile' // the permissions requested
+  scope: 'public_profile, user_birthday, user_location' // the permissions requested
 
   // note to self adjust user_photos to original info...
 });

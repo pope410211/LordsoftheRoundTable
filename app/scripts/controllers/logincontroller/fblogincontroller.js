@@ -58,11 +58,11 @@ function getName(authData) {
      console.log('work');
    }); //end newUser Auth
 
-var authData = firebaseFB.getAuth();
+   var authDataI = firebaseFB.getAuth();
 
-if (authData) {
-  console.log('Authenticated user with uid:', authData.uid);
-} // end .getAuth
+   if (authDataI) {
+     console.log('Authenticated user with uid:', authDataI.uid);
+   } // end .getAuth
 
 }); //end .controller('LoginController')
 

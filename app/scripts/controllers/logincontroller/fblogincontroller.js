@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function($scope, $http){
+  .controller('LoginControllerFb', function($scope, $http, Restangular){
 
 
     var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
@@ -52,7 +52,8 @@ function getName(authData) {
        // use them in Security and Firebase Rules, and show profiles
        firebaseFB.child('users').child(authData.uid).set({
          provider: authData.provider,
-         name: getName(authData)
+         name: getName(authData),
+
        });
      }
     //  console.log('gots the data');
@@ -65,26 +66,31 @@ function getName(authData) {
    } // end .getAuth
 
 
-   var token = firebaseFB.onAuth(function(authData) {
-        if (authData) {
-          return (authData.token);
-        }
-        console.log('gots the data' + authData.token);
+// var token = firebaseFB.onAuth(function(authData){
+//   if (authData) {
+//     return (authData.facebook.accessToken)
+//
+//   } else {
+//
+//   }
+//   console.log('finally', token);
+// });
 
-   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token=' + token + '&fields=picture{height,width,url},age_range,birthday,location').
+   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token=' + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
-       console.log('yay', data, status, headers, config);
+       console.log('yay');
+       console.log(success)
      }).
      error(function(data, status, headers, config) {
        console.log('boo', data, status, headers, config);
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });
-});
+
 
 }); //end .controller('LoginController')
 
 
-})();
+})(window);

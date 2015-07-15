@@ -4,7 +4,7 @@
 
 var lotrt = angular.module('lotrt', ['ui.router', 'restangular']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  // $urlRouterProvider.otherwise('home');
+  $urlRouterProvider.otherwise('home');
 
   $stateProvider
     .state('home', {

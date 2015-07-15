@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('lotrt', ['ngRoute']);
+var lotrt = angular.module('lotrt', ['ngRoute', 'restangular']);
   lotrt.config(function($routeProvider) {
   // $routeProvider.otherwise('/home');
 
@@ -30,9 +30,14 @@ var lotrt = angular.module('lotrt', ['ngRoute']);
         controllerAs: 'login'
       })
       .when('/loginFB', {
-        templateUrl: 'views/user/login.html',
+        templateUrl: 'views/user/profiles/profile.html',
         controller: 'LoginControllerFb',
         controllerAs: 'fblogin'
+      })
+      .when('/myprofile', {
+        templateUrl: 'views/user/profiles/profile.html',
+        controller: 'profileController',
+        controllerAs: 'profile'
       });
 
   });

@@ -4,6 +4,7 @@ body {
   font-family: Garamond, serif;
   font-size: 14px;
   color: #472F17;
+  background-color: black;
 
 
 
@@ -12,6 +13,7 @@ body {
   .container-fluid{
     max-width: 80%;
     background-image: url("/images/ricepaper.png");
+    min-height: 20em;
   }
 
   main {
@@ -24,7 +26,7 @@ body {
       float: left;
     }
     nav {
-      
+
 
     ul{
     float: left;

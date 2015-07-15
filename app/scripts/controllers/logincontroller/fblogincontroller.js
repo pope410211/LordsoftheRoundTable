@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function(){
+  .controller('LoginControllerFb', function($scope, $http){
 
 
     var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
@@ -19,7 +19,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
   }
 }, {
   remember: 'sessionOnly',
-  scope: 'public_profile' // the permissions requested
+  scope: 'public_profile, user_birthday, user_location' // the permissions requested
 
   // note to self adjust user_photos to original info...
 });
@@ -52,12 +52,45 @@ function getName(authData) {
        // use them in Security and Firebase Rules, and show profiles
        firebaseFB.child('users').child(authData.uid).set({
          provider: authData.provider,
-         name: getName(authData)
+         name: getName(authData),
+
        });
      }
-     console.log('work');
+    //  console.log('gots the data');
    }); //end newUser Auth
+
+   var authDataI = firebaseFB.getAuth();
+
+   if (authDataI) {
+    //  console.log('Authenticated user with uid:', authDataI.uid);
+   } // end .getAuth
+
+
+// var token = firebaseFB.onAuth(function(authData){
+//   if (authData) {
+//     return (authData.facebook.accessToken)
+//
+//   } else {
+//
+//   }
+//   console.log('finally', token);
+// });
+
+   $http.get('https://graph.facebook.com/v2.4/me?access_token=' + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
+    success(function(data, status, headers, config) {
+       // this callback will be called asynchronously
+       // when the response is available
+       console.log('yay');
+       console.log(success)
+     }).
+     error(function(data, status, headers, config) {
+       console.log('boo', data, status, headers, config);
+       // called asynchronously if an error occurs
+       // or server returns response with an error status.
+     });
+
+
 }); //end .controller('LoginController')
 
 
-})();
+})(window);

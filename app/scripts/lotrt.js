@@ -33,6 +33,11 @@ var lotrt = angular.module('lotrt', ['ngRoute', 'restangular']);
         templateUrl: 'views/user/profiles/profile.html',
         controller: 'LoginControllerFb',
         controllerAs: 'fblogin'
+      })
+      .when('/myprofile', {
+        templateUrl: 'views/user/profiles/profile.html',
+        controller: 'profileController',
+        controllerAs: 'profile'
       });
 
   });

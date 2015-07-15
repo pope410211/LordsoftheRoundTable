@@ -1,4 +1,6 @@
-<main ng-controller="profileController as profile">
+<!-- profile.html -->
+
+<main ng-controller="profileController as profile" ui-view>
   <div class="profile">
     <img ng-src="{{profile.picture.data.url}}"/>
   </div>
@@ -8,5 +10,5 @@
   <div>{{profile.birthday}}</div>
   <div>{{profile.location.name}}</div>
 </main>
-<button><a href="#/findgroup">FIND GROUP</a></button>
-<button><a href="#/startgroup">START GROUP</a></button>
+<button><a ui-sref="findgroup">FIND GROUP</a></button>
+<button><a ui-sref="startgroup">START GROUP</a></button>

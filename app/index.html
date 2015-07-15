@@ -27,24 +27,24 @@
 
 <main class="container-fluid">
 <div id="logo1">
-  <a href="#"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
+  <a href="#" ui-sref="#"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
   </div>
   <nav>
   <ul class="nav nav-pills">
     <li role="presentation"> </li>
-    <li role="presentation"><a href="#/home">HOME</a></li>
-    <li role="presentation"><a href="#/about">ABOUT US</a></li>
-    <li role="presentation"><a href="#">FIND GAMES</a></li>
-    <li role="presentation"><a href="#/blog">BLOG</a></li>
-    <li role="presentation"><a href="#/community">COMMUNITY</a></li>
+    <li role="presentation"><a href="#" ui-sref="home">HOME</a></li>
+    <li role="presentation"><a href="#" ui-sref="about">ABOUT US</a></li>
+    <li role="presentation"><a href="#" ui-sref="#">FIND GAMES</a></li>
+    <li role="presentation"><a href="#" ui-sref="blog">BLOG</a></li>
+    <li role="presentation"><a href="#" ui-sref="community">COMMUNITY</a></li>
     <li role="presentation"><input class="csearch" placeholder="SEARCH"</li>
-    <li role="presentation"><a href="#/login">LOGIN</a></li>
-    <li role="presentation"><a href="#/myprofile">PROFILE</a></li>
+    <li role="presentation"><a href="#" ui-sref="login">LOGIN</a></li>
+    <li role="presentation"><a href="#" ui-sref="myprofile">PROFILE</a></li>
   </ul>
 </nav>
 </main>
 <main class="container-fluid">
-<div class="container-fluid" ng-view></div>
+<div class="container-fluid" ui-view></div>
 </main>
 
     <!-- build:js scripts/vendor.js -->
@@ -56,6 +56,7 @@
     <script src="/bower_components/firebase/firebase.js"></script>
     <script src="/bower_components/angularfire/dist/angularfire.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function($scope, $http, Restangular){
+  .controller('LoginControllerFb', function($scope, $http){
 
 
     var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
@@ -76,7 +76,7 @@ function getName(authData) {
 //   console.log('finally', token);
 // });
 
-   $http.getOnAuth('https://graph.facebook.com/v2.4/me?access_token=' + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
+   $http.get('https://graph.facebook.com/v2.4/me?access_token=' + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available

@@ -52,7 +52,7 @@ function getName(authData) {
        // use them in Security and Firebase Rules, and show profiles
        firebaseFB.child('users').child(authData.uid).set({
          provider: authData.provider,
-         name: getName(authData),
+         name: getName(authData)
 
        });
      }
@@ -80,8 +80,7 @@ function getName(authData) {
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
-       console.log('yay');
-       console.log(success)
+       console.log('yay', data, status, headers, config);
      }).
      error(function(data, status, headers, config) {
        console.log('boo', data, status, headers, config);

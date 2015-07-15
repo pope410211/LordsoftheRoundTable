@@ -1,8 +1,9 @@
+/* global angular */
+
 (function(){
 'use strict';
 
 angular.module('lotrt')
-
 .controller('profileController', function($scope, $http){
 
   $http.get('api/facebook/user/nick.json').

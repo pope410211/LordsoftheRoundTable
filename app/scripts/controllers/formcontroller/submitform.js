@@ -13,7 +13,7 @@ var findGroup = firebaseSub.child('newGroup');
 var group = {
   'date': '',
   'groupName': '',
-}
+} 
 
 
 

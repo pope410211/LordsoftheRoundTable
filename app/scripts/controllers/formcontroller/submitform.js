@@ -9,12 +9,11 @@
 var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
 
 var self = this;
-
-// var selfRef = firebaseSub.child('newGroup');
-
-var group = {date: " ", groupName: " "}
 var findGroup = firebaseSub.child('newGroup');
-
+var group = {
+  'date': '',
+  'groupName': '',
+}
 
 
 

@@ -2,32 +2,28 @@
 (function(){
   'use strict';
 
-  angular.module('lotrt')
-
-  .controller('SubmitForm', function($stateParams, $firebase, $firebaseArray) {
-
-var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
-
-var self = this;
-
-var selfRef = firebaseSub.child('newGroup');
-
-// self.lotrt = $firebaseArray(firebaseSub);
-
-self.submit = function(){
-  self.selfRef.$add({
-
-      date: self.date,
-      groupName: self.groupName,
-      location: self.local
-
-  })//self.lotrt
+    angular.module('lotrt')
+      .controller('submitForm', function ($scope, $firebaseArray) {
 
 
 
-};//end of submit function;
-console.log('it worked', self.submit);
-});
+      var submitForm = new Firebase('https://lotrttest.firebaseio.com');
+      $scope.list = $firebaseArray(submitForm);
+
+
+      $scope.submit = function() {
+        $scope.list.$add({
+          date: $scope.playDate,
+          groupName: $scope.groupName
+        });
+        $scope.date = '';
+        $scope.groupName = '';
+
+
+
+      };
+      console.log($scope.list);
+    })
 
 
 })();

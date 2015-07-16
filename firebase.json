@@ -1,5 +1,5 @@
 {
-  "firebase": "lotrttest",
+  "firebase": "lordsoftheroundtable",
   "public": "./dist",
   "ignore": [
     "firebase.json",

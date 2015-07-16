@@ -7,7 +7,7 @@
   .controller('LoginControllerFb', function($scope, $http){
 
 
-    var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
+    var firebaseFB = new Firebase('https://lordsoftheroundtable.firebaseio.com');
 
 
 firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {

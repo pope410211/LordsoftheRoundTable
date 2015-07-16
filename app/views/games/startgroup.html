@@ -2,10 +2,10 @@
 
 
   <main ui-view>
-    <form>
-      <input type="date" class="form-control" placeholder="Date" ng-model="submit.date_game">
-      <input type="text" class="form-control" placeholder="Group Name">
-      <input type="text" class="form-Control" placeholder="Location">
+    <form ng-submit="submit()">
+      <input type="date" class="form-control" placeholder="Date" ng-model="self.date">
+      <input type="text" class="form-control" placeholder="Group Name" ng-model="submit.groupName">
+      <input type="text" class="form-Control" placeholder="Location" ng-model="local">
       <select>
         <option value="" disabled="disabled" selected="selected">CHOOSE A GAME TYPE</option>
         <option value="#">RPG - ROLE PLAYING GAME </option>
@@ -15,5 +15,5 @@
       <input type="text" class="form-control" placeholder="THE GAME TO PLAY">
       <input type="text" class="form-control" placeholder="Tell us about your group">
     </form>
-    <a ui-sref="submit" ng-submit="submit()">SUBMIT</a>
+    <a ui-sref="submit" >SUBMIT</a>
   </main>

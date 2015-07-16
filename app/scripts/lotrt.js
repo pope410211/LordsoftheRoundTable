@@ -2,9 +2,9 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('lotrt', ['ui.router', 'restangular']);
+var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+  // $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('home', {

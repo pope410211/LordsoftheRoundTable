@@ -31,10 +31,17 @@
   </div>
   <nav>
   <ul class="nav nav-pills">
-    <li role="presentation"> </li>
     <li role="presentation"><a href="#" ui-sref="home">HOME</a></li>
     <li role="presentation"><a href="#" ui-sref="about">ABOUT US</a></li>
-    <li role="presentation"><a href="#" ui-sref="#">FIND GAMES</a></li>
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      GAME ON <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#" ui-sref="startgroup">START GROUP</a></li>
+      <li><a href="#" ui-sref="#">FIND GROUP</a></li>
+    </ul>
+  </li>
     <li role="presentation"><a href="#" ui-sref="blog">BLOG</a></li>
     <li role="presentation"><a href="#" ui-sref="community">COMMUNITY</a></li>
     <li role="presentation"><input class="csearch" placeholder="SEARCH"</li>

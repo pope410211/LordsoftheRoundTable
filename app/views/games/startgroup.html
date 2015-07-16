@@ -2,8 +2,8 @@
 
 
   <main ui-view>
-    <form ng-submit="submit()">
-      <input type="date" class="form-control" placeholder="Date" ng-model="self.date">
+    <form >
+      <input type="date" class="form-control" placeholder="Date" ng-model="newGroup.date">
       <input type="text" class="form-control" placeholder="Group Name" ng-model="submit.groupName">
       <input type="text" class="form-Control" placeholder="Location" ng-model="local">
       <select>
@@ -15,5 +15,5 @@
       <input type="text" class="form-control" placeholder="THE GAME TO PLAY">
       <input type="text" class="form-control" placeholder="Tell us about your group">
     </form>
-    <a ui-sref="submit" >SUBMIT</a>
+    <a ui-sref="submit" ng-submit="submit()">SUBMIT</a>
   </main>

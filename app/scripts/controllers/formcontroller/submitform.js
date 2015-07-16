@@ -12,21 +12,21 @@ var self = this;
 
 var selfRef = firebaseSub.child('newGroup');
 
-self.lotrt = $firebaseArray(firebaseSub);
+// self.lotrt = $firebaseArray(firebaseSub);
 
 self.submit = function(){
-  self.selfRef.set ({
+  self.selfRef.$add({
 
       date: self.date,
       groupName: self.groupName,
       location: self.local
 
-  });//self.lotrt
+  })//self.lotrt
 
-console.log(self.submit);
+
 
 };//end of submit function;
-
+console.log('it worked', self.submit);
 });
 
 

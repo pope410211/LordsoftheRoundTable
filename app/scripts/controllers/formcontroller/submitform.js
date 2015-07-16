@@ -5,7 +5,7 @@
 
   angular.module('lotrt')
 
-  .controller('SubmitForm', function($scope, $stateParams){
+  .controller('SubmitForm', function($stateParams){
 
 var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
 
@@ -14,7 +14,7 @@ var startGroup = firebaseSub.child('newGroup');
 startGroup.set( {
 
   test: {
-    'date_of_game': $scope.date_game
+    'date_of_game': date_game
   }
 });
   console.log(startGroup);

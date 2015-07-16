@@ -1,3 +1,4 @@
+/* global angular Firebase */
 (function(){
   'use strict';
 
@@ -15,7 +16,7 @@ self.submit = function(){
   self.lotrt.set({
 
       date: self.date,
-      group_name: self.groupName,
+      groupName: self.groupName,
       location: self.local
 
   });//self.lotrt

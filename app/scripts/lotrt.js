@@ -4,7 +4,7 @@
 
 var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  // $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('home', {
@@ -45,7 +45,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         url: '/start/group',
         templateUrl: 'views/games/startgroup.html'
       })
-      .state('submit',{
+      .state('submit', {
         url: 'form/submitted',
         templateUrl: 'views/games/thankyousubmit.html',
         controller: 'SubmitForm',

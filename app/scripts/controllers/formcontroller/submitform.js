@@ -12,20 +12,22 @@ var self = this;
 
 // var selfRef = firebaseSub.child('newGroup');
 
+var group = { date: "", name: ""};
+
 self.submit = $firebaseArray(firebaseSub);
 
 this.submit = function(){
 
-  firebaseSub.child('group').set({
-    date: self.date,
-    name: self.groupName
+  firebaseSub.child('newGroup').push({
+    date: self.group.date,
+    name: self.group.groupName
     //self.submit
 
 
 });
 
 };//end of submit function;
-console.log(this.submit);
+console.log('it worked');
 });
 
 

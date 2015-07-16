@@ -10,23 +10,22 @@ var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
 
 var self = this;
 
-var selfRef = firebaseSub.child('newGroup');
+// var selfRef = firebaseSub.child('newGroup');
 
 self.submit = $firebaseArray(firebaseSub);
 
 this.submit = function(){
-  self.submit.$add({
 
-      date: self.date,
-      groupName: self.groupName,
-      location: self.local
-
-  })//self.submit
+  firebaseSub.child('group').set({
+    date: self.date,
+    name: self.groupName
+    //self.submit
 
 
+});
 
 };//end of submit function;
-console.log(self);
+console.log(this.submit);
 });
 
 

@@ -2,9 +2,9 @@
 
 
   <main ui-view>
-    <form  ng-submit="submit.submitGroup()">
-      <input type="date" class="form-control" placeholder="Date" ng-model="submit.date">
-      <input type="text" class="form-control" placeholder="Group Name" ng-model="submit.groupName">
+    <form  ng-submit="party.addGroup()">
+      <input type="date" class="form-control" placeholder="Date" ng-model="addGroup.date">
+      <input type="text" class="form-control" placeholder="Group Name" ng-model="party.groupName">
       <input type="text" class="form-Control" placeholder="Location" ng-model="local">
       <select>
         <option value="" disabled="disabled" selected="selected">CHOOSE A GAME TYPE</option>
@@ -14,6 +14,6 @@
       </select>
       <input type="text" class="form-control" placeholder="THE GAME TO PLAY">
       <input type="text" class="form-control" placeholder="TELL US ABOUT YOUR GROUP">
+      <a value="Add" ui-sref="submit">SUBMIT</a>
     </form>
-    <a ui-sref="submit">SUBMIT</a>
   </main>

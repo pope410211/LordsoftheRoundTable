@@ -49,10 +49,12 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         url: 'form/submitted',
         templateUrl: 'views/games/thankyousubmit.html',
         controller: 'SubmitController',
-        controllerAs: 'submit'
+        controllerAs: 'party'
       });
 
-  });
+  }); //ui.router
+
+  lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');
 
 
 

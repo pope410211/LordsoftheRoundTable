@@ -4,11 +4,12 @@
 
   angular.module('lotrt')
 
-  .controller('SubmitController', function($firebase, $firebaseArray) {
+  .controller('SubmitController', function( $firebase, $firebaseArray) {
 
+var self = this;
 var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
    var authData = firebaseSub.getAuth();
-   var groupRef = firebaseSub.child(authData.uid);
+   var groupRef = firebaseSub.child(authData.uid + '/newgroup');
    var newGroup = {
      'date': '',
      'groupName': ''
@@ -16,11 +17,11 @@ var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
  console.log(newGroup);
 
 
-   this.newGroup = $firebaseArray(groupRef);
-   this.submitGroup = function($firebaseArray) {
-     this.newGroup.$add({
-       date: this.date,
-       groupName: this.groupName,
+   self.newGroup = $firebaseArray(groupRef);
+   self.addGroup = function($firebaseArray) {
+     self.newGroup.$add({
+       date: self.date,
+       groupName: self.groupName,
      });
 
 

@@ -8,7 +8,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
 
   $stateProvider
     .state('home', {
-      url: '/home',
+      url: '/',
         templateUrl: 'views/home.html'
       })
     .state('about', {
@@ -50,11 +50,11 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         templateUrl: 'views/games/thankyousubmit.html',
         controller: 'SubmitController',
         controllerAs: 'party'
-      })
-      .state('not-found', {
-        url: '/:path*',
-        templateUrl: 'views/404.html'
-      }); //404 not working
+      });
+      // .state('/*/*', {
+      //   url: '/:path*',
+      //   templateUrl: 'views/404.html'
+      // }); 404 not working
 
   }); //ui.router
 

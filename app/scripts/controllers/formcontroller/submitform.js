@@ -7,15 +7,16 @@
   .controller('SubmitController', function($stateParams, $firebase, $firebaseArray) {
 
 var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
+   var authData = ref.getAuth();
+   var nailsRef = ref.child(authData.uid);
+   var newGroup = {
+     'date': '',
+     'groupName': ''
+   };
 
-var self = this;
-var findGroup = firebaseSub.child('newGroup');
-var group = {
-  'date': '',
-  'groupName': ''
-};
+   
 
-
+   };
 
 });
 

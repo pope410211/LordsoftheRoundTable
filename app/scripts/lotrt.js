@@ -4,7 +4,7 @@
 
 var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home'); // verify this .otherwise...
 
   $stateProvider
     .state('home', {
@@ -50,7 +50,11 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         templateUrl: 'views/games/thankyousubmit.html',
         controller: 'SubmitController',
         controllerAs: 'party'
-      });
+      })
+      .state('not-found', {
+        url: '/:path*',
+        templateUrl: 'views/404.html'
+      }); //404 not working
 
   }); //ui.router
 

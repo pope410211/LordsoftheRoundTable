@@ -4,10 +4,10 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function($http){
+  .controller('LoginControllerFb', function(FIREBASE_URL){
 
 
-    var firebaseFB = new Firebase('https://lotrttest.firebaseio.com');
+    var firebaseFB = new Firebase(FIREBASE_URL);
 
 
 firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {

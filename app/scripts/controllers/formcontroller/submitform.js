@@ -19,7 +19,7 @@ var firebaseSub = new Firebase('https://lotrttest.firebaseio.com');
 
    self.newGroup = $firebaseArray(groupRef);
    self.addGroup = function($firebaseArray) {
-     self.newGroup.$add({
+     self.$add({
        date: self.date,
        groupName: self.groupName,
      });

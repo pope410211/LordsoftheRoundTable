@@ -1,10 +1,10 @@
 <!-- startgroup.html -->
 
 
-  <main ui-view ng-submit="submit()">
-    <form >
+  <main ui-view>
+    <form  ng-submit="submit.submitGroup()">
       <input type="date" class="form-control" placeholder="Date" ng-model="submit.date">
-      <input type="text" class="form-control" placeholder="Group Name" ng-model="submit.group.groupName">
+      <input type="text" class="form-control" placeholder="Group Name" ng-model="submit.groupName">
       <input type="text" class="form-Control" placeholder="Location" ng-model="local">
       <select>
         <option value="" disabled="disabled" selected="selected">CHOOSE A GAME TYPE</option>

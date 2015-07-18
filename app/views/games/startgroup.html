@@ -1,7 +1,7 @@
 <!-- startgroup.html -->
 
 <main ui-view>
-  <form ng-submit="party.addGroup()">
+  <form ng-submit="party.submitGroup()">
     <div>
       <label> Name Your Party</label>
       <input type="text" class="form-control color" id="GN" placeholder="Group Name" ng-model="party.groupName" required>
@@ -79,8 +79,8 @@
       </fieldset>
             </div>
       <div class="col-xs-6 col-sm-12 col-md-offset-5">
-        <input  class="btn btn-default" type="submit" value="submit" required>
+        <input ui-sref="submit" class="btn btn-default" type="submit" value="submit" required>
       </div>
   </form>
-  <p>{{}}
+  <p>{{}}</P>
 </main>

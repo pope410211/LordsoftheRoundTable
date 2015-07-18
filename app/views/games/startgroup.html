@@ -4,13 +4,13 @@
   <form ng-submit="party.addGroup()">
     <div>
       <label> Name Your Party</label>
-      <input type="text" class="form-control color" id="GN" placeholder="Group Name" ng-model="party.groupName">
+      <input type="text" class="form-control color" id="GN" placeholder="Group Name" ng-model="party.groupName" required>
     </div>
     <div class="col-xs-6 col-md-4">
       <ul>
         <li>
           <label> Date of Game</label>
-          <input type="date" class="form-control color" id="DoE" placeholder="Date of Game" ng-model="party.date">
+          <input type="date" class="form-control color" id="DoE" placeholder="Date of Game" ng-model="party.date" required>
         </li>
         <li>
           <label>Time of Game</label>
@@ -18,7 +18,7 @@
         </li>
         <li>
           <label> Location of Game</label>
-          <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="local">
+          <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="local" >
         </li>
       </ul>
         </div>
@@ -78,8 +78,8 @@
         <textarea class="form-control" id="tug" maxlength="500"></textarea>
       </fieldset>
             </div>
-      <div class="col-xs-6 col-sm-12">
-        <button value="Add" id="submitbtn" ui-sref="submit">SUBMIT</button>
+      <div class="col-xs-6 col-sm-12 col-md-offset-5">
+        <input  class="btn btn-default" type="submit" value="submit" required>
       </div>
   </form>
 </main>

@@ -1,0 +1,30 @@
+main {
+
+  ul li{
+    list-style: none;
+  }
+
+
+ .color {
+   border-radius: 1em;
+   margin-bottom: 1em;
+} // end .color
+
+#tug {
+ min-height: 5em;
+ min-width: 5em;
+ max-height: 15em;
+}
+
+#submitbtn {
+  // background-color: black;
+  // border: none;
+  // font-color: white;
+  // color: white;
+  font-size: 1em;
+  box-sizing: border-box;
+  width: 7em;
+  height: 3em;
+}
+
+} // end main

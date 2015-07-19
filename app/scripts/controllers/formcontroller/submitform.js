@@ -4,7 +4,7 @@
   angular.module('lotrt')
     .controller('SubmitController', function(FIREBASE_URL, groups, $stateParams) {
 
-            this.group = {};
+            this.group = [];
 
             /**
              * @param {FormController} $form submitted
@@ -15,7 +15,8 @@
 
               groups.add(this.group);
 
-              this.group = {}; // Reset the form...
+              this.group = {};
+               // Reset the form...
 
               // $state.go('submit');
 

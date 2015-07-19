@@ -8,7 +8,7 @@
  return {
    // CREATE
    add: function(group) {
-     contact.created_on = new Date;
+     group.created_on = new Date;
 
      // Record the submission...
      groups.push(group);

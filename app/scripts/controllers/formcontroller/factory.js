@@ -23,7 +23,7 @@
    // UPDATE?
    // DELETE?
  };
-}); // END module(form-demo)
+}); // END module
 
 
 

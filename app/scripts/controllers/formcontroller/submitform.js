@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, Group, $sate) {
+    .controller('SubmitController', function(FIREBASE_URL, groups, $stateParams) {
 
             this.group = {};
 
@@ -15,14 +15,15 @@
 
               groups.add(this.group);
 
-              this.group = {}; // Reset the form...
+              // this.group = {}; // Reset the form...
 
               // $state.go('contact-list');
-console.log("YES!", saveGroup);
+
   };
+  console.log("YES!", groups);
 });//end .controller
 
 
-    
+
 
 })();

@@ -12,7 +12,9 @@
           <label> Date of Game</label>
           <input type="date" class="form-control color" id="DoE" placeholder="Date of Game" ng-model="party.group.date" required>
         </li>
-        <li>
+      </ul> <!--delete this after testing -->
+    </div> <!--delete this after testing -->
+        <!-- <li>
           <label>Time of Game</label>
           <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
         </li>
@@ -77,10 +79,10 @@
         <label for="bio">Tell Us About Your Group</label>
         <textarea class="form-control" id="tug" maxlength="500"></textarea>
       </fieldset>
-            </div>
+            </div> -->
       <div class="col-xs-6 col-sm-12 col-md-offset-5">
         <input ui-sref="submit" class="btn btn-default" type="submit" value="submit" required>
       </div>
   </form>
-  <p>{{}}</P>
+  <p>{{group.date}}</P>
 </main>

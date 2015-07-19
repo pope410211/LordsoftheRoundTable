@@ -44,12 +44,13 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
       .state('startgroup', {
         url: '/start/group',
         templateUrl: 'views/games/startgroup.html'
+        // controller: 'SubmitController',
+        // controllerAs: 'party'
       })
       .state('submit', {
         url: 'form/submitted',
-        templateUrl: 'views/games/startgroup.html',
-        controller: 'SubmitController',
-        controllerAs: 'party'
+        templateUrl: 'views/games/thankyousubmit.html'
+
       });
       // .state('/*/*', {
       //   url: '/:path*',

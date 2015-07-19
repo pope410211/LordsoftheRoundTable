@@ -15,9 +15,9 @@
 
               groups.add(this.group);
 
-              // this.group = {}; // Reset the form...
+              this.group = {}; // Reset the form...
 
-              // $state.go('contact-list');
+              // $state.go('submit');
 
   };
   console.log("YES!", groups);

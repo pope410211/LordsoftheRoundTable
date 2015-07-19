@@ -1,16 +1,16 @@
 <!-- startgroup.html -->
 
 <main ui-view>
-  <form ng-submit="party.submitGroup()">
+  <form name="groupForm" ng-submit="party.saveGroup(groupForm)">
     <div>
       <label> Name Your Party</label>
-      <input type="text" class="form-control color" id="GN" placeholder="Group Name" ng-model="party.groupName" required>
+      <input type="text" class="form-control color" id="GN" placeholder="Group Name" ng-model="party.group.groupName" required>
     </div>
     <div class="col-xs-6 col-md-4">
       <ul>
         <li>
           <label> Date of Game</label>
-          <input type="date" class="form-control color" id="DoE" placeholder="Date of Game" ng-model="party.date" required>
+          <input type="date" class="form-control color" id="DoE" placeholder="Date of Game" ng-model="party.group.date" required>
         </li>
         <li>
           <label>Time of Game</label>

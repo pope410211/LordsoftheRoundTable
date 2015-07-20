@@ -1,18 +1,20 @@
 <!-- startgroup.html -->
 
 <main>
-  <form name="groupForm" ng-submit="party.saveGroup()">
+  <form name="groupForm" ng-submit="party.saveGroups(groupForm)">
     <div>
       <label> Name Your Party</label>
-      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="party.groupName" required>
+      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="game.groupName" required>
     </div>
-    <dl class="col-xs-6 col-md-4">
+    <div ng-repeat= >
+    <dl class="col-xs-6 col-md-4" >
       <dt> Date of Game </dt>
-      <dd> {{game.date}} </dd>
-
-      <dt> Another Field Title </dt>
+      <dd> {{party.game.groupName}} </dd>
+</dl>
+</div>
+      <!-- <dt> Another Field Title </dt>
       <dd> {{game.another_field}} </dd>
-    </dl>
+    </dl> -->
     <dl class="col-xs-6 col-md-4">
     <fieldset class="col-sm-6 col-md-4">
       <p class="input-group">

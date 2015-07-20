@@ -43,7 +43,9 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
       })
       .state('startgroup', {
         url: '/start/group',
-        templateUrl: 'views/games/startgroup.html'
+        templateUrl: 'views/games/startgroup.html',
+        controller: 'SubmitController',
+        controllerAs: 'party'
 
       })
       .state('submit', {

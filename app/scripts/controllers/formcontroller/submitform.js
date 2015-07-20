@@ -11,10 +11,10 @@
 });
 
             var sub = new Firebase('https://lotrttest.firebaseio.com/group/' + 'groups');
-            self.groups = $firebaseArray(sub);
+            this.groups = $firebaseArray(sub);
 
 
-            self.saveGroups = function() {
+            this.saveGroups = function() {
               // Do nothing if nothing is submitted or if invalid
               // if (!$form.$dirty || !$form.$valid) {
               //

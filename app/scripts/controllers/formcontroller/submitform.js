@@ -1,8 +1,10 @@
-/* global angular Firebase */
+/* global angular */
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, groups, $stateParams) {
+    .controller('SubmitController', function(FIREBASE_URL, groups) {
+ var self = this;
+
 
             this.group = [];
 
@@ -10,18 +12,20 @@
              * @param {FormController} $form submitted
              */
             this.saveGroup = function($form) {
-              // Do nothing is nothing is submitted or if invalid
-              if (!$form.$dirty || !$form.$valid) return;
+              // Do nothing is nothing if submitted or if invalid
+              if (!$form.$dirty || !$form.$valid) {
 
-              groups.add(this.group);
+               return;
 
-              this.group = {};
+              groups.add(self.group);
+
+              self.groups = {};
                // Reset the form...
 
-              // $state.go('submit');
 
+}
   };
-  console.log("YES!", groups);
+  console.log('yes', groups);
 });//end .controller
 
 

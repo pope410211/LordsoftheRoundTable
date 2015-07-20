@@ -1,5 +1,6 @@
+/* global angular */
 (function(){
-  'use strict'
+  'use strict';
 
   angular.module('lotrt')
   .factory('groups', function() {
@@ -8,7 +9,7 @@
  return {
    // CREATE
    add: function(group) {
-     group.created_on = new Date;
+     group.createdOn = new Date;
 
      // Record the submission...
      groups.push(group);
@@ -19,7 +20,7 @@
    all: function() {
      return groups.slice();
      // TODO: Maybe fetch from Firebase one day?
-   },
+   }
    // UPDATE?
    // DELETE?
  };

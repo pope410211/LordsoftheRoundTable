@@ -52,7 +52,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         controller: 'SubmitController',
         controllerAs: 'party'
       })
-      .state('findGame',{
+      .state('findGame', {
         url: 'find/game/list',
         templateUrl: 'views/games/listpage.html',
         controller: 'ListController',

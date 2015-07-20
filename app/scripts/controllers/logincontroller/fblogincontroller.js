@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function(FIREBASE_URL){
+  .controller('LoginControllerFb', function(FIREBASE_URL, $http){
 
 
     var firebaseFB = new Firebase(FIREBASE_URL);

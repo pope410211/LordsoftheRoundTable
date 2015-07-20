@@ -2,8 +2,10 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http) {
+    .controller('SubmitController', function(FIREBASE_URL, $http, $state) {
       console.log('inside the controller');
+
+var sub = new Firbase(FIREBASE_URL);
 
     var self = this;
     this.game = {};
@@ -14,6 +16,7 @@
       self.games.push(self.game);
       console.log(self.games);
       self.game = [];
+        // $state.go('findGame')
     };
 
     }); //end .controller

@@ -54,6 +54,7 @@ function getName(authData) {
          provider: authData.provider,
          name: getName(authData)
 
+
        });
      }
     //  console.log('gots the data');

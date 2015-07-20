@@ -77,20 +77,7 @@ body {
 
 }
 
-.cont-height {
-  min-height: 100%;
-  /* equal to footer height */
-    margin-bottom: -142px;
-}
-.cont-height:after {
-  content: "";
-  display: block;
-}
-.site-footer, .cont-height:after {
-  /* .push must be the same height as footer */
-    height: 142px;
-}
-.site-footer {
-  background: orange;
+
     } //end main
+
   } //end

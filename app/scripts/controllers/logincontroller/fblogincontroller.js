@@ -60,22 +60,6 @@ function getName(authData) {
     //  console.log('gots the data');
    }); //end newUser Auth
 
-   var authDataI = firebaseFB.getAuth();
-
-   if (authDataI) {
-    //  console.log('Authenticated user with uid:', authDataI.uid);
-   } // end .getAuth
-
-
-// var token = firebaseFB.onAuth(function(authData){
-//   if (authData) {
-//     return (authData.facebook.accessToken)
-//
-//   } else {
-//
-//   }
-//   console.log('finally', token);
-// });
 
 firebaseFB.onAuth(function(authData){
 

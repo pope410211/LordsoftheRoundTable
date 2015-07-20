@@ -6,15 +6,14 @@
       console.log('inside the controller');
 
     var self = this;
+    this.game = {};
+    this.games = [];
 
-      this.game = {};
-
-      this.saveGroups = function() {
-        console.log('anything');
-        this.games.push(FIREBASE_URL);
-        console.log('work');
-        this.game = {};
-      };
+    self.saveGroups = function() {
+      self.games.push(self.game);
+      console.log(self.games);
+      self.game = {};
+    };
 
     }); //end .controller
 

@@ -51,6 +51,12 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         templateUrl: 'views/games/thankyousubmit.html',
         controller: 'SubmitController',
         controllerAs: 'party'
+      })
+      .state('findGame',{
+        url: 'find/game/list',
+        templateUrl: 'views/games/listpage.html',
+        controller: 'ListController',
+        controllerAs: 'list'
       });
       // .state('/*/*', {
       //   url: '/:path*',

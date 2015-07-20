@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http, $firebaseArray, games) {
+    .controller('SubmitController', function(FIREBASE_URL, $http, games) {
       console.log('inside the controller');
 
     var self = this;
@@ -11,7 +11,7 @@
 
       this.saveGroups = function() {
         console.log('anything');
-        groupForm.games.push(this.game);
+        this.games.push(FIREBASE_URL);
         console.log('work');
         this.game = {};
       };

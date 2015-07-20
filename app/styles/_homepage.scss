@@ -5,6 +5,9 @@ body {
   font-size: 14px;
   color: #472F17;
   background-color: black;
+  // position: fixed;
+  // max-height: 100%;
+
 
 
 
@@ -13,6 +16,8 @@ body {
   .container-fluid{
     max-width: 80%;
     background-image: url("/images/ricepaper.png");
+    max-height: 100%;
+    // position: fixed;
   }
 
   main {
@@ -68,5 +73,5 @@ body {
    text-align: center;
 
 }
-    }
+    } //end main
   } //end

@@ -4,10 +4,10 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function($scope, $http){
+  .controller('LoginControllerFb', function(FIREBASE_URL, $http){
 
 
-    var firebaseFB = new Firebase('https://lordsoftheroundtable.firebaseio.com');
+    var firebaseFB = new Firebase(FIREBASE_URL);
 
 
 firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {

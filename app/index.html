@@ -27,7 +27,7 @@
 
 <main class="container-fluid">
 <div id="logo1">
-  <a href="#" ui-sref="#"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
+  <a href="#" ui-sref="home"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
   </div>
   <nav>
   <ul class="nav nav-pills">
@@ -39,7 +39,7 @@
     </a>
     <ul class="dropdown-menu">
       <li><a href="#" ui-sref="startgroup">START GROUP</a></li>
-      <li><a href="#" ui-sref="#">FIND GROUP</a></li>
+      <li><a href="#" ui-sref="findGame">FIND GROUP</a></li>
     </ul>
   </li>
     <li role="presentation"><a href="#" ui-sref="blog">BLOG</a></li>
@@ -51,7 +51,7 @@
 </nav>
 </main>
 <main class="container-fluid">
-<div class="container-fluid" ui-view></div>
+<div ui-view></div>
 </main>
 
     <!-- build:js scripts/vendor.js -->
@@ -85,6 +85,8 @@
 
     <!-- inject:js -->
     <script src="scripts/lotrt.js"></script>
+    <script src="scripts/controllers/formcontroller/factory.js"></script>
+    <script src="scripts/controllers/formcontroller/listform.js"></script>
     <script src="scripts/controllers/formcontroller/submitform.js"></script>
     <script src="scripts/controllers/logincontroller/fblogincontroller.js"></script>
     <script src="scripts/controllers/profilecontroller/profile.js"></script>

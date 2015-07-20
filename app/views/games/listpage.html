@@ -1,0 +1,15 @@
+<main ui-view>
+  <p> Choose your game wisely </p>
+  <table ng-repeat="party in list.group">
+    <thead >
+      <tr>
+        <th>{{list.group.groupInfo.groupName}} | {{list.group.date}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{list.group.city}} | {{list.group.game}}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>

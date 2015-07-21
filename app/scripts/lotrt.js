@@ -63,7 +63,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         url: '/404',
         templateUrl: 'views/404.html'
       }); //404 not working
-      $urlRouterProvider.otherwise('/home'); // verify this .otherwise...
+      $urlRouterProvider.otherwise('/'); // verify this .otherwise...
 
   }); //ui.router
 

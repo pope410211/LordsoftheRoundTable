@@ -13,7 +13,7 @@
 
     self.saveGroups = function() {
 
-      $http.post(FIREBASE_URL + '/newGroup').
+      $http.post({method: 'JSONP', data: self.games, FIREBASE_URL}).
         success(function(data) {
           self.games({
              groupName: self.groupName
@@ -32,7 +32,7 @@
 
 
 
-     };
+     }; // end self.saveGroups
 
 
     }); //end .controller

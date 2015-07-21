@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http) {
+    .controller('SubmitController', function(FIREBASE_URL, $http, restangular) {
       console.log('inside the controller');
 
 // var firebaseSub = new Firebase(FIREBASE_URL);

@@ -54,6 +54,10 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   }); //ui.router
 
   lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');
+  
+  lotrt.config(function(RestangularProvider){
+    RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com');
+  });
 
 
 

@@ -5,32 +5,34 @@
     .controller('SubmitController', function(FIREBASE_URL, $http, $state) {
       console.log('inside the controller');
 
-var firbaseSub = new Firebase(FIREBASE_URL);
+var firebaseSub = new Firebase(FIREBASE_URL);
 
     var self = this;
     this.game = {};
     this.games = [];
 
-    self.saveGroups = function($form) {
-       if (!$form.$dirty || !$form.$valid) return;
-      self.games.push(self.game);
-      console.log(self.games);
-      self.game = {};
-        // $state.go('findGame')
-    };
-    var isNewGroup= true;
+    self.saveGroups = function() {
 
-    firbaseSub.onSubmit(function(saveGroups) {
-      if (self.games && isNewGroup) {
+      $http.post(FIREBASE_URL + '/newGroup').
+        success(function(data) {
+          self.games({
+             groupName: self.groupName
+    // console.log(self.games);
+           });
+           self.groupName = '';
+           // this callback will be called asynchronously
+           // when the response is available
+           console.log('yay', data);
+         }).
+         error(function(data, status, headers, config) {
+           console.log('boo', data, status, headers, config);
+           // called asynchronously if an error occurs
+           // or server returns response with an error status.
+         });
 
-        firebaseSub.child('groups').child('/newGroup').set({
-          name: self.game.groupName
 
 
-        });
-      }
-      console.log('set the DATA FINALLY');
-    }); //end
+     };
 
 
     }); //end .controller

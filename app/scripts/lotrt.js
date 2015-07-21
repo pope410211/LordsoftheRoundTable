@@ -4,11 +4,10 @@
 
 var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home'); // verify this .otherwise...
 
   $stateProvider
     .state('home', {
-      url: '/',
+      url: '/home',
         templateUrl: 'views/home.html'
       })
     .state('about', {
@@ -59,11 +58,12 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         templateUrl: 'views/games/listpage.html',
         controller: 'ListController',
         controllerAs: 'list'
-      });
-      // .state('/*/*', {
-      //   url: '/:path*',
-      //   templateUrl: 'views/404.html'
-      // }); 404 not working
+      })
+      .state('404', {
+        url: '/404',
+        templateUrl: 'views/404.html'
+      }); //404 not working
+      $urlRouterProvider.otherwise('/home'); // verify this .otherwise...
 
   }); //ui.router
 

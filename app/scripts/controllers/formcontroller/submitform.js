@@ -1,11 +1,11 @@
-/* global angular Firbase */
+/* global angular */
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http, $state) {
+    .controller('SubmitController', function(FIREBASE_URL, $http) {
       console.log('inside the controller');
 
-var firebaseSub = new Firebase(FIREBASE_URL);
+// var firebaseSub = new Firebase(FIREBASE_URL);
 
     var self = this;
     this.game = {};

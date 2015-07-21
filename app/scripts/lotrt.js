@@ -9,21 +9,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
     .state('home', {
       url: '/home',
         templateUrl: 'views/home.html'
-      })
-    .state('about', {
-      url: '/about',
-        templateUrl: 'views/comm/about.html'
-
-      })
-      .state('blog', {
-        url: '/blog',
-          templateUrl: 'views/comm/blog.html'
-      })
-      .state('community', {
-        url: '/community',
-        templateUrl: 'views/comm/community.html'
-        // authRequired: true
-      })
+      })  
       .state('login', {
         url: '/login',
         templateUrl: 'views/user/login.html'

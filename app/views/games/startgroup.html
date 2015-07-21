@@ -4,12 +4,12 @@
   <form name="groupForm" ng-submit="party.saveGroups(groupForm)">
     <div>
       <label> Name Your Party</label>
-      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="party.game.groupName" required>
+      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="game.groupName" required>
     </div>
     <div >
     <dl class="col-xs-6 col-md-4" >
-      <dt> Date of Game </dt>
-      <dd ng-repeat="game in party.games" > {{party.groupName}} </dd>
+      <dt> GROUP NAME </dt>
+      <dd ng-repeat="game in party.games" > {{game.groupName}} </dd>
 </dl>
 </div>
       <!-- <dt> Another Field Title </dt>

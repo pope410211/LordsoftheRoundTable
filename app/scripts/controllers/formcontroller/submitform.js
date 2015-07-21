@@ -12,6 +12,12 @@
     this.games = [];
 
     self.saveGroups = function() {
+      self.games.push(self.game);
+      console.log(self.games);
+      self.game = {};
+      self.games = [];
+
+
         // TODO: Create an Ad(Group) from data in the form...
         // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
      }; // end self.saveGroups

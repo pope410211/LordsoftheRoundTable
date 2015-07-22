@@ -1,7 +1,7 @@
 body {
   background-image: url("/images/lotrt-bg.png");
   max-width: 100%;
-  font-family: Garamond, serif;
+  font-family: 'Goudy Bookletter 1911', serif;
   font-size: 14px;
   color: #472F17;
   background-color: black;
@@ -16,7 +16,10 @@ body {
   .container-fluid{
     max-width: 80%;
     background-image: url("/images/ricepaper.png");
-    max-height: 100%;
+  }
+  .cont-height{
+
+    height: 100vh;
     // position: fixed;
   }
 
@@ -47,31 +50,11 @@ body {
     }
   }
 }
-  .csearch {
-    border-radius: 1em;
-  }
+ .font{
+   font-size: 3em;
+ }
 
-  ::-webkit-input-placeholder {
-   color: #472F17;
-   text-align: center;
-}
 
-:-moz-placeholder { /* Firefox 18- */
-   color: #472F17;
-   text-align: center;
-
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #472F17;
-   text-align: center;
-
-}
-
-:-ms-input-placeholder {
-   color: #472F17;
-   text-align: center;
-
-}
     } //end main
+
   } //end

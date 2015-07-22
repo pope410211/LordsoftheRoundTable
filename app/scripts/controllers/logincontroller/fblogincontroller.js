@@ -15,7 +15,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
     console.log('Login Failed!', error);
   } else {
     // the access token will allow us to make Open Graph API calls
-    console.log(authData.facebook.accessToken);
+    console.log('this is token', authData.facebook.accessToken);
   }
 }, {
   remember: 'sessionOnly',
@@ -54,29 +54,18 @@ function getName(authData) {
          provider: authData.provider,
          name: getName(authData)
 
+
        });
      }
     //  console.log('gots the data');
    }); //end newUser Auth
 
-   var authDataI = firebaseFB.getAuth();
 
-   if (authDataI) {
-    //  console.log('Authenticated user with uid:', authDataI.uid);
-   } // end .getAuth
+firebaseFB.onAuth(function(authData){
 
 
-// var token = firebaseFB.onAuth(function(authData){
-//   if (authData) {
-//     return (authData.facebook.accessToken)
-//
-//   } else {
-//
-//   }
-//   console.log('finally', token);
-// });
 
-   $http.get('https://graph.facebook.com/v2.4/me?access_token=' + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
+   $http.get('https://graph.facebook.com/v2.4/me?access_token=' + authData.facebook.accessToken + '&fields=id,name,picture{height,width,url},age_range,birthday,location').
     success(function(data, status, headers, config) {
        // this callback will be called asynchronously
        // when the response is available
@@ -87,7 +76,7 @@ function getName(authData) {
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });
-
+});// token auth
 
 }); //end .controller('LoginController')
 

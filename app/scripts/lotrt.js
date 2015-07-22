@@ -4,26 +4,11 @@
 
 var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home'); // verify this .otherwise...
 
   $stateProvider
     .state('home', {
-      url: '/',
+      url: '/home',
         templateUrl: 'views/home.html'
-      })
-    .state('about', {
-      url: '/about',
-        templateUrl: 'views/comm/about.html'
-
-      })
-      .state('blog', {
-        url: '/blog',
-          templateUrl: 'views/comm/blog.html'
-      })
-      .state('community', {
-        url: '/community',
-        templateUrl: 'views/comm/community.html'
-        // authRequired: true
       })
       .state('login', {
         url: '/login',
@@ -43,7 +28,9 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
       })
       .state('startgroup', {
         url: '/start/group',
-        templateUrl: 'views/games/startgroup.html'
+        templateUrl: 'views/games/startgroup.html',
+        controller: 'SubmitController',
+        controllerAs: 'party'
 
       })
       .state('submit', {
@@ -57,15 +44,20 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         templateUrl: 'views/games/listpage.html',
         controller: 'ListController',
         controllerAs: 'list'
-      });
-      // .state('/*/*', {
-      //   url: '/:path*',
-      //   templateUrl: 'views/404.html'
-      // }); 404 not working
+      })
+      .state('404', {
+        url: '/404',
+        templateUrl: 'views/404.html'
+      }); //404 not working
+      $urlRouterProvider.otherwise('/'); // verify this .otherwise...
 
   }); //ui.router
 
   lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');
+  
+  lotrt.config(function(RestangularProvider){
+    RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com');
+  });
 
 
 

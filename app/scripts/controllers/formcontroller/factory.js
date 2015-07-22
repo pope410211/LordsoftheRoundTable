@@ -3,31 +3,27 @@
 //   'use strict';
 //
 //   angular.module('lotrt')
-//   .factory('groups', function() {
-//  var groups = [];
+//   .factory('games', function() {
+//  var games = [];
 //
 //  return {
 //    // CREATE
-//    add: function(group) {
-//      group.createdOn = new Date;
+//    add: function(game) {
+//      game.createdOn = new Date;
 //
 //      // Record the submission...
-//      groups.push(group);
+//      games.push(game);
 //
 //      // TODO: Maybe POST this to Firebase one day?
 //    },
 //    // READ
 //    all: function() {
-//      return groups.slice();
-//      // TODO: Maybe fetch from Firebase one day?
+//      return games.slice();
+//    // TODO: Maybe fetch from Firebase one day?
 //    }
 //    // UPDATE?
 //    // DELETE?
 //  };
 // }); // END module
-//
-//
-//
-//
-//
+
 // })();

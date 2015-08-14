@@ -8,16 +8,16 @@
 // var firebaseSub = new Firebase(FIREBASE_URL);
 
     var self = this;
-    this.game = {
+    this.gameO = {
       groupName: '',
       date: '',
       local: '',
       description: ''
     };
-    this.games = [];
+    this.gameA = [];
 
     self.saveGroups = function() {
-      self.games.push(self.game);
+      self.game.push(self.game);
 
 
         // TODO: Create an Ad(Group) from data in the form...

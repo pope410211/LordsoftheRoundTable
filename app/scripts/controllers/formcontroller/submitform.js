@@ -23,6 +23,8 @@ var firebaseSub = new Firebase(FIREBASE_URL);
       self.game = {};
         // TODO: Create an Ad(Group) from data in the form...
         // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
+
+
      }; // end self.saveGroups
 
      var isNewGame = true;
@@ -40,13 +42,13 @@ var firebaseSub = new Firebase(FIREBASE_URL);
 // });
 // onClick function
 
-function createCTRL(Restangular){
-  this.save = function(){
-    Restangular.all('games').post(this.game)
-  };
-  console.log(createCTRL);
-};
-
+// function createCTRL(Restangular){
+//   this.save = function(){
+//     Restangular.all('games').post(this.games, this.game)
+//
+//   };
+// console.log('it is working', createCTRL);
+// };
 
 
 

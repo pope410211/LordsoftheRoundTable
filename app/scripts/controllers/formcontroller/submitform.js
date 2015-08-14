@@ -5,7 +5,7 @@
     .controller('SubmitController', function(FIREBASE_URL, $http, Restangular) {
       console.log('inside the controller');
 
-// var firebaseSub = new Firebase(FIREBASE_URL);
+var firebaseSub = new Firebase(FIREBASE_URL);
 
     var self = this;
     this.game = {
@@ -14,15 +14,41 @@
       local: '',
       description: ''
     };
-    this.game = [];
+    this.games = [];
 
-    self.saveGroups = function() {
-      self.game.push(self.game);
+    self.saveGroups = function(games) {
+      self.games.push(self.game);
+      console.log('yay', self.games);
 
-
+      self.game = {};
         // TODO: Create an Ad(Group) from data in the form...
         // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
      }; // end self.saveGroups
+
+     var isNewGame = true;
+
+// firebaseSub.onClick(function(games){
+// if(games && isNewGame){
+//   firebaseSub.child('game').child(uid).set({
+//     groupName: groupName.games,
+//     date: date.games,
+//     local: local.games,
+//     description: description.games
+//   });
+// }
+// // console.log('it works!' games);
+// });
+// onClick function
+
+function createCTRL(Restangular){
+  this.save = function(){
+    Restangular.all('games').post(this.game)
+  };
+  console.log(createCTRL);
+};
+
+
+
 
 
     }); //end .controller

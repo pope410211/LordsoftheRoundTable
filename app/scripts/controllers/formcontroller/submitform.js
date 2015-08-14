@@ -8,13 +8,13 @@
 // var firebaseSub = new Firebase(FIREBASE_URL);
 
     var self = this;
-    this.gameO = {
+    this.game = {
       groupName: '',
       date: '',
       local: '',
       description: ''
     };
-    this.gameA = [];
+    this.game = [];
 
     self.saveGroups = function() {
       self.game.push(self.game);

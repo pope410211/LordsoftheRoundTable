@@ -56,22 +56,22 @@ self.saveGroups = function(Restangular){
   self.games.push(self.game);
 
   console.log('ARRAY', self.games);
-  // this.save = function(){
-  //   Restangular.all(self.games).set({
-  //     groupName: groupName.game
-  //   })
-  //
-  // };
   this.save = function(){
-    if (games && isNewGame){
-      firebaseSub.child('game').set({
-              groupName: self.game,
+    Restangular.all(self.games).set({
+      groupName: groupName.game
+    })
 
-            });
-    };
   };
+  // this.save = function(){
+  //   if (games && isNewGame){
+  //     firebaseSub.child('game').set({
+  //             groupName: self.game,
+  //
+  //           });
+  //   };
+  // };
   self.game = {};
-console.log('DATA');
+console.log('DATA',);
 };
 
     }); //end .controller

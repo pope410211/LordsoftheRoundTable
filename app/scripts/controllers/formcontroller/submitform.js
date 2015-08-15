@@ -62,7 +62,7 @@ self.saveGroups = function(Restangular){
   //   })
   //
   // };
-  this.save = function(games){
+  this.save = function(){
     if (games && isNewGame){
       firebaseSub.child('game').set({
               groupName: self.game,
@@ -71,7 +71,7 @@ self.saveGroups = function(Restangular){
     };
   };
   self.game = {};
-console.log('DATA', );
+console.log('DATA');
 };
 
     }); //end .controller

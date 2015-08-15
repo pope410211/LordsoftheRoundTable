@@ -16,52 +16,55 @@ var firebaseSub = new Firebase(FIREBASE_URL);
     };
     this.games = [];
 
-    self.saveGroups = function(games) {
-      self.games.push(self.game);
-      console.log('yay', self.games);
+    // self.saveGroups = function(games) {
+    //   self.games.push(self.game);
+    //   console.log('yay', self.games);
+    // self.game = {};
 
-      self.dataBase1 = function createCTRL(Restangular){
-        this.save = function(){
-          Restangular.all('games').post(this.games)
 
-        };
-      console.log('it is working', createCTRL);
-      };
 
-      self.game = {};
+
+
         // TODO: Create an Ad(Group) from data in the form...
         // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
 
 
 
-     }; // end self.saveGroups
+    //  };
+      // end self.saveGroups
 
-    //  var isNewGame = true;
-
-// firebaseSub.onClick(function(games){
-// if(games && isNewGame){
-//   firebaseSub.child('game').child(uid).set({
-//     groupName: groupName.games,
-//     date: date.games,
-//     local: local.games,
-//     description: description.games
-//   });
-//   // console.log('it works!', games);
-// }
+//      var isNewGame = true;
+// this.saveGroups = function(games){
+//     if(games && isNewGame){
+//       firebaseSub.child('game').set({
+//         groupName: self.game,
 //
-// });
+//       });
+//         self.game = {};
+//       console.log('it works!', games);
+//     }
+//
+//
+//     };
 // onClick function
 
-// function createCTRL(Restangular){
-//   this.save = function(){
-//     Restangular.all('games').post(this.games, this.game)
-//
-//   };
-// console.log('it is working', createCTRL);
-// };
 
 
 
+
+self.saveGroups = function(Restangular){
+  self.games.push(self.game);
+
+  console.log('ARRAY', self.games);
+  this.save = function(){
+    Restangular.all(self.games).set({
+      groupName: groupName.game
+    })
+
+  };
+  self.game = {};
+console.log('DATA', Restangular);
+};
 
     }); //end .controller
 

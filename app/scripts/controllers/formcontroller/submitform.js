@@ -20,14 +20,23 @@ var firebaseSub = new Firebase(FIREBASE_URL);
       self.games.push(self.game);
       console.log('yay', self.games);
 
+      self.dataBase1 = function createCTRL(Restangular){
+        this.save = function(){
+          Restangular.all('games').post(this.games)
+
+        };
+      console.log('it is working', createCTRL);
+      };
+
       self.game = {};
         // TODO: Create an Ad(Group) from data in the form...
         // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
 
 
+
      }; // end self.saveGroups
 
-     var isNewGame = true;
+    //  var isNewGame = true;
 
 // firebaseSub.onClick(function(games){
 // if(games && isNewGame){
@@ -37,8 +46,9 @@ var firebaseSub = new Firebase(FIREBASE_URL);
 //     local: local.games,
 //     description: description.games
 //   });
+//   // console.log('it works!', games);
 // }
-// // console.log('it works!' games);
+//
 // });
 // onClick function
 

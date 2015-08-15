@@ -33,7 +33,7 @@ var firebaseSub = new Firebase(FIREBASE_URL);
     //  };
       // end self.saveGroups
 
-//      var isNewGame = true;
+     var isNewGame = true;
 // this.saveGroups = function(games){
 //     if(games && isNewGame){
 //       firebaseSub.child('game').set({
@@ -56,14 +56,22 @@ self.saveGroups = function(Restangular){
   self.games.push(self.game);
 
   console.log('ARRAY', self.games);
-  this.save = function(){
-    Restangular.all(self.games).set({
-      groupName: groupName.game
-    })
+  // this.save = function(){
+  //   Restangular.all(self.games).set({
+  //     groupName: groupName.game
+  //   })
+  //
+  // };
+  this.save = function(games){
+    if (games && isNewGame){
+      firebaseSub.child('game').set({
+              groupName: self.game,
 
+            });
+    };
   };
   self.game = {};
-console.log('DATA', Restangular);
+console.log('DATA', );
 };
 
     }); //end .controller

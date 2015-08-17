@@ -53,6 +53,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
        state.go('404');
        return $location.path(); // verify this .otherwise...
   });
+  $urlRouterProvider.when('', '/home');
   }); //ui.router
 
   lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');

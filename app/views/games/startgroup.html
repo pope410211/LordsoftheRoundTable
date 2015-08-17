@@ -6,31 +6,30 @@
       <label> Name Your Party</label>
       <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="party.groupName" required>
     </div>
-    <div class=" col-xs-6 col-md-4"
-      <ul>
-        <li>
-          <label> Date of Game</label>
-          <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="party.date">
+    <div class=" col-xs-6 col-md-4" <ul>
+      <li>
+        <label> Date of Game</label>
+        <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="party.date">
         <li>
           <label>Time of Game</label>
           <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
         </li>
         <li>
           <label> Location of Game</label>
-          <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="party.local" >
+          <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="party.local">
         </li>
-      </ul>
-        </div>
-        <div class="col-xs-6 col-md-4">
-          <ul>
-            <label> Game Type </label>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <ul>
+        <label> Game Type </label>
         <li>
           <select class="color" ng-model="party.style">
-            <option value="" disabled="disabled" selected="selected">Select</option>
-            <option >RPG </option>
-            <option >CARD</option>
-            <option >BOARD</option>
-            <option >LARP</option>
+            <option disabled="disabled" selected="selected">Select</option>
+            <option>RPG </option>
+            <option>CARD</option>
+            <option>BOARD</option>
+            <option>LARP</option>
           </select>
         </li>
         <li>
@@ -39,45 +38,45 @@
         </li>
         <label>State</label>
 
-          <li>
-            <select class="color" ng-model="party.state">
-              <option value="" disabled="disabled" selected="selected" >State</option>
-              <option > FL </option>
-            </select>
-          </li>
-          <label>Age Group</label>
-          <li>
+        <li>
+          <select class="color" ng-model="party.state">
+            <option value=" " disabled="disabled" selected="selected">State</option>
+            <option> FL </option>
+          </select>
+        </li>
+        <label>Age Group</label>
+        <li>
 
-            <select class="color" ng-model="party.age">
-              <option value="" disabled="disabled" selected="selected" >Select</option>
-              <option >Any</option>
-              <option >13+</option>
-              <option >17+</option>
-              <option >21+</option>
-            </select>
-          </li>
-          <label> Game System </label>
-          <li>
-            <select class="color" ng-model="party.system">
-              <option value="" disabled="disabled" selected="selected" >Select</option>
-              <option >d20</option>
-              <option >d6</option>
-              <option >Story</option>
-              <option >SEIGE</option>
-              <option >SAGA</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-            <div class="col-xs-6 col-md-4">
+          <select class="color" ng-model="party.age">
+            <option value="" disabled="disabled" selected="selected">Select</option>
+            <option>Any</option>
+            <option>13+</option>
+            <option>17+</option>
+            <option>21+</option>
+          </select>
+        </li>
+        <label> Game System </label>
+        <li>
+          <select class="color" ng-model="party.system">
+            <option value="" disabled="disabled" selected="selected">Select</option>
+            <option>d20</option>
+            <option>d6</option>
+            <option>Story</option>
+            <option>SEIGE</option>
+            <option>SAGA</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
       <fieldset class="form-group color">
         <label for="bio">Tell Us About Your Group</label>
         <textarea class="form-control" id="tug" maxlength="500" ng-model="party.description"></textarea>
       </fieldset>
-            </div>
-      <div class="col-xs-6 col-sm-12 col-md-offset-5">
-        <input type="submit" value="Submit">
-      </div>
+    </div>
+    <div class="col-xs-6 col-sm-12 col-md-offset-5">
+      <input type="submit" value="Submit">
+    </div>
   </form>
 </main>
-  <p>{{party.groupName}}</P>
+<p>{{party.groupName}}</P>

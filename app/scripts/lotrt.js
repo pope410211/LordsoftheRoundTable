@@ -27,7 +27,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         controllerAs: 'profile'
       })
       .state('startgroup', {
-        url: '/start/group',
+        url: '/start-group',
         templateUrl: 'views/games/startgroup.html',
         controller: 'SubmitController',
         controllerAs: 'party'
@@ -40,17 +40,20 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         controllerAs: 'party'
       })
       .state('findGame', {
-        url: 'find/game/list',
+        url: '/find-game/list',
         templateUrl: 'views/games/listpage.html',
         controller: 'ListController',
         controllerAs: 'list'
       })
       .state('404', {
-        url: '/404',
+        
         templateUrl: 'views/404.html'
       }); //404 not working
-      $urlRouterProvider.otherwise('/'); // verify this .otherwise...
-
+      $urlRouterProvider.otherwise(function($injector, $location){
+       var state = $injector.get('$state');
+       state.go('404');
+       return $location.path(); // verify this .otherwise...
+  });
   }); //ui.router
 
   lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');

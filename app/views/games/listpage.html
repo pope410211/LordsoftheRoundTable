@@ -1,9 +1,9 @@
 <main>
   <p> Choose your game wisely </p>
-  <table ng-repeat="party in list.group">
+  <table ng-repeat="newGroup in list.newGroup">
     <thead >
       <tr>
-        <th>{{list.group.groupName}} | {{list.group.date}}</th>
+        <th>{{newGroup._id.groupName}} | {{list.group.date}}</th>
       </tr>
     </thead>
     <tbody>
@@ -12,4 +12,5 @@
       </tr>
     </tbody>
   </table>
+  
 </main>

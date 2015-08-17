@@ -1,28 +1,47 @@
-/* global angular */
+/* global angular  Firebase */
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http, Restangular) {
+    .controller('SubmitController', function(FIREBASE_URL, $firebaseArray) {
       console.log('inside the controller');
+      var self = this;
+        var firebaseSub = new Firebase(FIREBASE_URL);
+        var authData = firebaseSub.getAuth();
+        var games = firebaseSub.child('/newGroup');
+        var newGame = {
+          'groupName': '',
+          // 'date': '',
+          // 'time': '',
+          'location': '',
+          'style': '',
+          'game': '',
+          'state': '',
+          'age': '',
+          'system': '',
+          'description': '',
+          'user': ''
 
-// var firebaseSub = new Firebase(FIREBASE_URL);
 
-    var self = this;
-    this.game = {
-      groupName: '',
-      date: '',
-      local: '',
-      description: ''
-    };
-    this.games = [];
+        };
+        this.newGame = $firebaseArray(games);
+        console.log(newGame);
+        this.saveGroups = function() {
+          this.newGame.$add({
+            groupName: self.groupName,
+            // date: self.date,
+            // time: self.time ,
+            location: self.local,
+            style: self.style,
+            game: self.game,
+            state: self.state,
+            age: self.age,
+            system: self.system,
+            description: self.description,
+            user: authData.uid
 
-    self.saveGroups = function() {
-      self.games.push(self.game);
 
-
-        // TODO: Create an Ad(Group) from data in the form...
-        // TODO: Put that Ad(Group) in the list of all Ads(Groups)...
-     }; // end self.saveGroups
+          });
+        };
 
 
     }); //end .controller

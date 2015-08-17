@@ -9,14 +9,36 @@
         var authData = firebaseSub.getAuth();
         var games = firebaseSub.child('/newGroup');
         var newGame = {
-          'groupName': ''
+          'groupName': '',
+          // 'date': '',
+          // 'time': '',
+          'location': '',
+          // 'style': '',
+          'game': '',
+          'state': '',
+          'age': '',
+          'system': '',
+          'description': '',
+          'user': ''
+
 
         };
         this.newGame = $firebaseArray(games);
         console.log(newGame);
         this.saveGroups = function() {
           this.newGame.$add({
-            groupName: self.groupName
+            groupName: self.groupName,
+            // date: self.date,
+            // time: self.time ,
+            location: self.local,
+            // style: self.style,
+            game: self.game,
+            state: self.state,
+            age: self.age,
+            system: self.system,
+            description: self.description,
+            user: authData.uid
+
 
           });
           newGame = {};

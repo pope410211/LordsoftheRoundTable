@@ -5,12 +5,15 @@
     .controller('SubmitController', function(FIREBASE_URL, $firebaseArray) {
       console.log('inside the controller');
       var self = this;
+      var date = this.date = {
+         value: new Date(2013, 9, 22)
+       };
         var firebaseSub = new Firebase(FIREBASE_URL);
         var authData = firebaseSub.getAuth();
         var games = firebaseSub.child('/newGroup');
         var newGame = {
           'groupName': '',
-          // 'date': '',
+          'date': '',
           // 'time': '',
           'location': '',
           'style': '',
@@ -28,7 +31,7 @@
         this.saveGroups = function() {
           this.newGame.$add({
             groupName: self.groupName,
-            // date: self.date,
+            date: this.date,
             // time: self.time ,
             location: self.local,
             style: self.style,

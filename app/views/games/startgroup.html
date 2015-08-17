@@ -9,7 +9,7 @@
     <div class=" col-xs-6 col-md-4" <ul>
       <li>
         <label> Date of Game</label>
-        <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="party.date">
+        <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="date.value">
         <li>
           <label>Time of Game</label>
           <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
@@ -40,7 +40,7 @@
 
         <li>
           <select class="color" ng-model="party.state">
-            <option value=" " disabled="disabled" selected="selected">State</option>
+            <option ng-selected="selected" disabled="disabled" selected="selected">State</option>
             <option> FL </option>
           </select>
         </li>

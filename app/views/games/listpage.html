@@ -1,16 +1,16 @@
 <main>
   <p> Choose your game wisely </p>
-  <table ng-repeat="newGroup in list.newGroup">
+  <table ng-repeat="(key, group) in list.newGroup">
     <thead >
       <tr>
-        <th>{{newGroup._id.groupName}} | {{list.group.date}}</th>
+        <th>{{group.groupName}} | {{group.date}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{list.group.city}} | {{list.group.game}}</td>
+        <td>{{group.location}} | {{group.game}}</td>
       </tr>
     </tbody>
   </table>
-  
+
 </main>

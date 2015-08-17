@@ -14,14 +14,14 @@ var self = this;
 
 
 
-$http.get(FIREBASE_URL + '/newGroup' + '.json').
-    success(function(data, status, headers, config) {
+$http.get(FIREBASE_URL + '/newGroup.json').
+    success(function(data) {
       self.newGroup = data;
       console.log('success groups', data);
     }).
-    error(function(data, status, headers, config) {
+    error(function(data) {
       // log error
-      console.log('Failed groups', data, status, headers, config);
+      console.log('Failed groups', data);
     });
 
 

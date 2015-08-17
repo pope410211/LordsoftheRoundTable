@@ -1,8 +1,8 @@
-/* global angular */
+/* global angular  Firebase */
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $http, Restangular, $firebaseArray, $location) {
+    .controller('SubmitController', function(FIREBASE_URL, $firebaseArray) {
       console.log('inside the controller');
       var self = this;
         var firebaseSub = new Firebase(FIREBASE_URL);

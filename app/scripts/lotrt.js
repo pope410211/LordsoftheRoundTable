@@ -46,7 +46,6 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
         controllerAs: 'list'
       })
       .state('404', {
-        
         templateUrl: 'views/404.html'
       }); //404 not working
       $urlRouterProvider.otherwise(function($injector, $location){

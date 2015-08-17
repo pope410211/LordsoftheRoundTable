@@ -7,7 +7,7 @@
       var self = this;
         var firebaseSub = new Firebase(FIREBASE_URL);
         var authData = firebaseSub.getAuth();
-        var games = firebaseSub.child(authData.uid + '/findGame');
+        var games = firebaseSub.child('/newGroup');
         var newGame = {
           'groupName': ''
 
@@ -19,6 +19,7 @@
             groupName: self.groupName
 
           });
+          newGame = {};
         };
 
 

@@ -24,7 +24,7 @@ $http.get(FIREBASE_URL + '/newGroup.json').
       console.log('Failed groups', data);
     });
 
-
+  
 
 }); //END controller
 

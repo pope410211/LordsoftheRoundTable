@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'angularUtils.directives.dirPagination']);
+var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider

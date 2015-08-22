@@ -24,7 +24,6 @@
           'description': '',
           'user': ''
 
-
         };
         this.newGame = $firebaseArray(games);
         console.log(newGame);
@@ -33,6 +32,7 @@
             groupName: self.groupName,
             date: this.date,
             // time: self.time ,
+            partyInfo: {
             location: self.local,
             style: self.style,
             game: self.game,
@@ -41,7 +41,8 @@
             system: self.system,
             description: self.description,
             user: authData.uid
-
+          }
+/// re-adjust datbase layout above...
 
           });
         };

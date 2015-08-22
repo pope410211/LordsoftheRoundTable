@@ -24,7 +24,30 @@ $http.get(FIREBASE_URL + '/newGroup.json').
       console.log('Failed groups', data);
     });
 
-  
+
+
+    // this.newGroup = [];
+    // this.totalNewGroup = 0;
+    // this.newGroupPerPage = 10;
+    // getResultsPage(1);
+    //
+    // this.pagination = {
+    //     current: 1
+    // };
+    //
+    // this.pageChanged = function(newPage) {
+    //     getResultsPage(newPage);
+    // };
+    //
+    // function getResultsPage(pageNumber) {
+    //     // this is just an example, in reality this stuff should be in a service
+    //     $http.get(FIREBASE_URL + '/newGroup'+ pageNumber)
+    //         .then(function(result) {
+    //             self.newGroup = result.data.Items;
+    //             self.totalNewGroup = result.data.Count
+    //         });
+    // }
+
 
 }); //END controller
 

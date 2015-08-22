@@ -1,4 +1,4 @@
-<main>
+<main >
   <p> Choose your game wisely </p>
   <table ng-repeat="(key, group) in list.newGroup">
     <thead >
@@ -13,6 +13,25 @@
     </tbody>
   </table>
 
-
-
+  <div paging
+    page="35"
+    page-size="10"
+    total="1000"
+    paging-action="foo('bar', page)">
+  </div> 
+  <paging
+    class="small"
+    page="currentPage"
+    page-size="pageSize"
+    total="total"
+    adjacent="{{adjacent}}"
+    dots="{{dots}}"
+    scroll-top="{{scrollTop}}"
+    hide-if-empty="{{hideIfEmpty}}"
+    ul-class="{{ulClass}}"
+    active-class="{{activeClass}}"
+    disabled-class="{{disabledClass}}"
+    show-prev-next="{{showPrevNext}}"
+    paging-action="DoCtrlPagingAct('Paging Clicked', page, pageSize, total)">
+  </paging>
 </main>

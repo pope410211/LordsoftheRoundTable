@@ -29,19 +29,22 @@
         console.log(newGame);
         this.saveGroups = function() {
           this.newGame.$add({
-            groupName: self.groupName,
+            user: authData.uid,
             date: this.date,
+            state: self.state,
+            // timeStamp: this.stamp,
+            groupInfo: {
+            groupName: self.groupName,
+
             // time: self.time ,
-            partyInfo: {
             location: self.local,
             style: self.style,
             game: self.game,
-            state: self.state,
             age: self.age,
             system: self.system,
-            description: self.description,
-            user: authData.uid
-          }
+            description: self.description
+}
+
 /// re-adjust datbase layout above...
 
           });

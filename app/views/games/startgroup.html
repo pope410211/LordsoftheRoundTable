@@ -1,5 +1,4 @@
 <!-- startgroup.html -->
-
 <main>
   <form name="groupForm" ng-submit="party.saveGroups(groupForm)">
     <div>
@@ -26,7 +25,7 @@
         <label> Game Type </label>
         <li>
           <select class="color" ng-model="party.style">
-            <option disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>RPG </option>
             <option>CARD</option>
             <option>BOARD</option>
@@ -38,10 +37,9 @@
           <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="party.game">
         </li>
         <label>State</label>
-
         <li>
           <select class="color" ng-model="party.state">
-            <option>State</option>
+            <option value="" disabled selected>State</option>
             <option>AL</option>
             <option>AK</option>
             <option>AZ</option>
@@ -98,7 +96,7 @@
         <label>Age Group</label>
         <li>
           <select class="color" ng-model="party.age">
-            <option disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>Any</option>
             <option>13+</option>
             <option>17+</option>
@@ -108,7 +106,7 @@
         <label> Game System </label>
         <li>
           <select class="color" ng-model="party.system">
-            <option disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>d20</option>
             <option>d6</option>
             <option>Story</option>

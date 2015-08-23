@@ -43,7 +43,7 @@
   },
   "name": "lordsoftheroundtable",
   "description": "Gamer/Group matching service",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "gulpfile.babel.js",
   "directories": {
     "test": "test"

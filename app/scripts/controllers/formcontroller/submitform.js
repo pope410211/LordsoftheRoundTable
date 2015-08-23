@@ -5,12 +5,15 @@
     .controller('SubmitController', function(FIREBASE_URL, $firebaseArray) {
       console.log('inside the controller');
       var self = this;
+      // var date = this.date = {
+      //    value: new Date(2013, 9, 22)
+      //  };
         var firebaseSub = new Firebase(FIREBASE_URL);
         var authData = firebaseSub.getAuth();
         var games = firebaseSub.child('/newGroup');
         var newGame = {
           'groupName': '',
-          // 'date': '',
+          'date': '',
           // 'time': '',
           'location': '',
           'style': '',
@@ -21,24 +24,28 @@
           'description': '',
           'user': ''
 
-
         };
         this.newGame = $firebaseArray(games);
         console.log(newGame);
         this.saveGroups = function() {
           this.newGame.$add({
+            user: authData.uid,
+            date: this.date,
+            state: self.state,
+            // timeStamp: this.stamp,
+            groupInfo: {
             groupName: self.groupName,
-            // date: self.date,
+
             // time: self.time ,
             location: self.local,
             style: self.style,
             game: self.game,
-            state: self.state,
             age: self.age,
             system: self.system,
-            description: self.description,
-            user: authData.uid
+            description: self.description
+}
 
+/// re-adjust datbase layout above...
 
           });
         };

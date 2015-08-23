@@ -3,12 +3,12 @@
   <table ng-repeat="(key, group) in list.newGroup">
     <thead >
       <tr>
-        <th>{{group.groupName}} | {{group.date}}</th>
+        <th>{{group.groupInfo.groupName}} | {{group.date}} | {{group.state}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{group.location}} | {{group.game}}</td>
+        <td>{{group.groupInfo.location}} | {{group.groupInfo.game}}</td>
       </tr>
     </tbody>
   </table>

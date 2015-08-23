@@ -27,7 +27,7 @@
 
         };
 
-var newDate = new Date()
+var newDate = new Date();
 
 
         this.newGame = $firebaseArray(games);

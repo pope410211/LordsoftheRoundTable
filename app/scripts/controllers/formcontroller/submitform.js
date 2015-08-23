@@ -13,7 +13,7 @@
         var games = firebaseSub.child('/newGroup');
         var newGame = {
           'groupName': '',
-          // 'date': '',
+          'date': '',
           // 'time': '',
           'location': '',
           'style': '',
@@ -27,6 +27,7 @@
 
         };
 
+var newDate = new Date()
 
 
         this.newGame = $firebaseArray(games);
@@ -34,7 +35,7 @@
         this.saveGroups = function() {
           this.newGame.$add({
             user: authData.uid,
-            // date: this.date,
+            date: self.date,
             state: self.state,
             timeStamp: Firebase.ServerValue.TIMESTAMP,
             groupInfo: {

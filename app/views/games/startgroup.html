@@ -1,31 +1,31 @@
 <!-- startgroup.html -->
-
 <main>
   <form name="groupForm" ng-submit="party.saveGroups(groupForm)">
     <div>
       <label> Name Your Party</label>
       <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="party.groupName" required>
     </div>
-    <div class=" col-xs-6 col-md-4" <ul>
-      <li>
-        <label> Date of Game</label>
-        <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="date.value">
+    <div class=" col-xs-6 col-md-4">
+      <ul>
         <li>
-          <label>Time of Game</label>
-          <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
-        </li>
-        <li>
-          <label> Location of Game</label>
-          <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="party.local">
-        </li>
-        </ul>
+          <label> Date of Game</label>
+          <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="date.value">
+          <li>
+            <label>Time of Game</label>
+            <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
+          </li>
+          <li>
+            <label> Location of Game</label>
+            <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="party.local">
+          </li>
+      </ul>
     </div>
     <div class="col-xs-6 col-md-4">
       <ul>
         <label> Game Type </label>
         <li>
           <select class="color" ng-model="party.style">
-            <option disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>RPG </option>
             <option>CARD</option>
             <option>BOARD</option>
@@ -37,18 +37,66 @@
           <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="party.game">
         </li>
         <label>State</label>
-
         <li>
           <select class="color" ng-model="party.state">
-            <option ng-selected="selected" disabled="disabled" selected="selected">State</option>
-            <option> FL </option>
+            <option value="" disabled selected>State</option>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>DC</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>MT</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
           </select>
         </li>
         <label>Age Group</label>
         <li>
-
           <select class="color" ng-model="party.age">
-            <option value="" disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>Any</option>
             <option>13+</option>
             <option>17+</option>
@@ -58,7 +106,7 @@
         <label> Game System </label>
         <li>
           <select class="color" ng-model="party.system">
-            <option value="" disabled="disabled" selected="selected">Select</option>
+            <option value="" disabled selected>Select</option>
             <option>d20</option>
             <option>d6</option>
             <option>Story</option>
@@ -75,8 +123,7 @@
       </fieldset>
     </div>
     <div class="col-xs-6 col-sm-12 col-md-offset-5">
-      <input type="submit" value="Submit">
+      <input type="submit" Submit>
     </div>
   </form>
 </main>
-<p>{{party.groupName}}</P>

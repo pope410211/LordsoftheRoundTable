@@ -11,7 +11,7 @@
         var firebaseSub = new Firebase(FIREBASE_URL);
 
         var authData = firebaseSub.getAuth();
-        var games = firebaseSub.child('/newGroup' ).child(newGroup);
+        var games = firebaseSub.child('/newGroup');
         var newGroup = [];
         var newGame =  {};
         var partyGame = newGroup.push(newGame);
@@ -22,8 +22,7 @@
         this.newGame = $firebaseArray(games);
         console.log(newGroup);
         this.saveGroups = function() {
-          this.partyGame =
-          self.newGame.$add({
+          this.newGame.$add({
             user: authData.uid,
             // date: self.date,
             // state: self.state,

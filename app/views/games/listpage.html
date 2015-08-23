@@ -1,6 +1,12 @@
-<main>
+<main ng-controller="PageCtrl">
+  <form class="form-inline">
+    <div class="form-group">
+        <label >Search</label>
+        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+    </div>
+</form>
   <p> Choose your game wisely </p>
-  <table dir-paginate="(key, group) in list.newGroup | orderBy: sort | itemsPerPage: 5">
+  <table dir-paginate="(group, key) in newGroup | filter:search | itemsPerPage:5">
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
@@ -13,6 +19,7 @@
     </tbody>
   </table>
 
-
+<div >
 <dir-pagination-controls></dir-pagination-controls>
+</div>
 </main>

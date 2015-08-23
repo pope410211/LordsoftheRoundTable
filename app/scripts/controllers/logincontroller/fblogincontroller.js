@@ -40,6 +40,7 @@ function getName(authData) {
        return authData.facebook.displayName;
      }
    }
+
    var isNewUser = true;
 
    firebaseFB.onAuth(function(authData) {

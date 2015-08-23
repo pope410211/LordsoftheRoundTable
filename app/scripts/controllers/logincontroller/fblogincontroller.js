@@ -19,7 +19,7 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
   }
 }, {
   remember: 'sessionOnly',
-  scope: 'public_profile, user_birthday, user_location' // the permissions requested
+  scope: 'public_profile, user_birthday, user_location, email' // the permissions requested
 
   // note to self adjust user_photos to original info...
 });
@@ -40,6 +40,14 @@ function getName(authData) {
        return authData.facebook.displayName;
      }
    }
+
+   function getEmail(authData){
+     switch (authData.provider) {
+       case 'facebook':
+         return authData.facebook.email;
+
+     }
+   }
    var isNewUser = true;
 
    firebaseFB.onAuth(function(authData) {
@@ -48,7 +56,8 @@ function getName(authData) {
        // use them in Security and Firebase Rules, and show profiles
        firebaseFB.child('users').child(authData.uid).set({
          provider: authData.provider,
-         name: getName(authData)
+         name: getName(authData),
+         email: getEmail(authData)
 
 
        });

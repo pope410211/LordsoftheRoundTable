@@ -27,7 +27,8 @@
 
         };
 
-var newDate = new Date();
+var newDate= new Date();
+
 
 
         this.newGame = $firebaseArray(games);
@@ -35,7 +36,7 @@ var newDate = new Date();
         this.saveGroups = function() {
           this.newGame.$add({
             user: authData.uid,
-            date: self.date,
+            date: this.newDate | newDate,
             state: self.state,
             timeStamp: Firebase.ServerValue.TIMESTAMP,
             groupInfo: {

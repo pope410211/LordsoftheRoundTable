@@ -1,6 +1,6 @@
 <main>
   <p> Choose your game wisely </p>
-  <table ng-repeat="(key, group) in list.newGroup">
+  <table dir-paginate="(key, group) in list.newGroup | orderBy: sort | itemsPerPage: 5">
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
@@ -13,4 +13,6 @@
     </tbody>
   </table>
 
+
+<dir-pagination-controls></dir-pagination-controls>
 </main>

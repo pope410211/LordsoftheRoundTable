@@ -9,9 +9,15 @@
       //    value: new Date(2013, 9, 22)
       //  };
         var firebaseSub = new Firebase(FIREBASE_URL);
-
+        var isNewGame = true;
         var authData = firebaseSub.getAuth();
-        var games = firebaseSub.child('/newGroup').push(newGroup);
+        var games = firebaseSub.child('/newGroup');
+        // .then(function(){
+        //   if (newGame && isNewGame)
+        //
+        //   newGroup.push(newGame);
+        //
+        // });
         var newGroup = [];
         var newGame =  {
           'user': '',
@@ -29,7 +35,7 @@
             'description': ''
           }
         };
-        var partyGame = newGroup.push(games);
+        // var partyGame = newGroup.push(games);
 
 
 // var newDate = new Date()

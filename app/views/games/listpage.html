@@ -6,7 +6,7 @@
     </div>
 </form>
   <p> Choose your game wisely </p>
-  <table dir-paginate="(group, key) in newGroup | filter:search | itemsPerPage:5">
+  <table dir-paginate="(key, group) in list.newGroup | filter: search | itemsPerPage: 5">
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>

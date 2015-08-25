@@ -4,7 +4,7 @@
 angular.module('lotrt')
 .controller('PageCtrl', function($scope, $http, FIREBASE_URL){
 
-  $scope.number = ($scope.$index + 1) + ($scope.currentPage - 1) * $scope.pageSize;
+  // $scope.number = ($scope.$index + 1) + ($scope.currentPage - 1) * $scope.pageSize;
 
 //   $scope.newGroup = [];
 //   $scope.totalNewGroup = 0;

@@ -12,12 +12,7 @@
         var isNewGame = true;
         var authData = firebaseSub.getAuth();
         var games = firebaseSub.child('/newGroup');
-        // .then(function(){
-        //   if (newGame && isNewGame)
-        //
-        //   newGroup.push(newGame);
-        //
-        // });
+
         var newGroup = [];
         var newGame =  {
           'user': '',
@@ -41,10 +36,11 @@
 // var newDate = new Date()
 
 
-        this.newGroup = $firebaseArray(games);
-        console.log(partyGame);
+        this.newGame = $firebaseArray(games);
+        // console.log(partyGame);
         this.saveGroups = function() {
-          self.newGroup.$add({
+          if (newGame && isNewGame) {
+          self.newGame.$add({
             user: authData.uid,
             // date: self.date,
             // state: self.state,
@@ -62,13 +58,15 @@
 
 
 
-          }).then(partyGame);
-          this.partyGame = newGroup.push(newGame);
+          }).then(function(){
+              newGroup.push(newGame);
+          });
+};
+};
 
-        }
 
-
-    }); //end .controller
+    });
+     //end .controller
 
 
 

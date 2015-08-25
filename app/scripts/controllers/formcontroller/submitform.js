@@ -11,25 +11,40 @@
         var firebaseSub = new Firebase(FIREBASE_URL);
 
         var authData = firebaseSub.getAuth();
-        var games = firebaseSub.child('/newGroup');
+        var games = firebaseSub.child('/newGroup').push(newGroup);
         var newGroup = [];
-        var newGame =  {};
-        var partyGame = newGroup.push(newGame);
+        var newGame =  {
+          'user': '',
+          'date': '',
+          'state': '',
+          'timeStamp': '',
+          groupInfo: {
+            'groupName': '',
+            'time': '',
+            'location': '',
+            'style': '',
+            'game': '',
+            'age': '',
+            'system': '',
+            'description': ''
+          }
+        };
+        var partyGame = newGroup.push(games);
+
 
 // var newDate = new Date()
 
 
-        this.newGame = $firebaseArray(games);
-        console.log(newGroup);
+        this.newGroup = $firebaseArray(games);
+        console.log(partyGame);
         this.saveGroups = function() {
-          this.newGame.$add({
+          self.newGroup.$add({
             user: authData.uid,
             // date: self.date,
             // state: self.state,
             timeStamp: Firebase.ServerValue.TIMESTAMP,
             groupInfo: {
             groupName: self.groupName
-
             // time: self.time ,
             // location: self.local,
             // style: self.style,
@@ -41,7 +56,7 @@
 
 
 
-          });
+          }).then(partyGame);
           this.partyGame = newGroup.push(newGame);
 
         }

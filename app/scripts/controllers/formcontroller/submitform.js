@@ -42,6 +42,7 @@
 
 
           });
+          this.partyGame = newGroup.push(newGame);
 
         }
 

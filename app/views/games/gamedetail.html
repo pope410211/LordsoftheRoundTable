@@ -6,8 +6,7 @@
     </div>
 </form>
   <p> Choose your game wisely </p>
-  <a ui-sref="findGame(id/group)">
-  <table ng-repeat="(key, group) in list.newGroup">
+  <table>
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
@@ -19,5 +18,4 @@
       </tr>
     </tbody>
   </table>
-</a>
 </main>

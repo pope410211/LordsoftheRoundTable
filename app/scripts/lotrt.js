@@ -45,9 +45,15 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controller: 'ListController',
         controllerAs: 'list'
       })
+      .state('findGame(key:id, group)',{
+        url: '/find-game/list/list-datails/:id',
+        templateUrl: 'views/games/gamedetail.html',
+        controller: 'ListController',
+        controllerAs: 'list'
+      })
       .state('404', {
         templateUrl: 'views/404.html'
-      }); //404 not working
+      });
       $urlRouterProvider.otherwise(function($injector, $location){
        var state = $injector.get('$state');
        state.go('404');

@@ -58,9 +58,7 @@
 
 
 
-          }).then(function(){
-              newGroup.push(newGame);
-          });
+          })
 };
 };
 

@@ -2,9 +2,22 @@
 'use strict';
 
 angular.module('lotrt')
-.controller('PageCtrl', function($scope, $http, FIREBASE_URL){
+.controller('PageCtrl', function($scope, $http, FIREBASE_URL, $pageArray){
+$scope.pageItems = $pageArray(ref, 'number');
+var ref = new Firebase(FIREBASE_URL + '/newGroup')
+});
+//end controller
 
-  // $scope.number = ($scope.$index + 1) + ($scope.currentPage - 1) * $scope.pageSize;
+
+
+
+})();
+
+
+
+
+
+// $scope.number = ($scope.$index + 1) + ($scope.currentPage - 1) * $scope.pageSize;
 
 //   $scope.newGroup = [];
 //   $scope.totalNewGroup = 0;
@@ -29,11 +42,3 @@ angular.module('lotrt')
 // });
 //
 // };
-
-});
-//end controller
-
-
-
-
-})();

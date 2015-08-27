@@ -6,7 +6,7 @@
     </div>
 </form>
   <p> Choose your game wisely </p>
-  <table dir-paginate="(key, group) in list.newGroup | filter: search | itemsPerPage: 5">
+  <table ng-repeat="(key, group) in list.newGroup">
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
@@ -19,7 +19,32 @@
     </tbody>
   </table>
 
-<div >
-<dir-pagination-controls></dir-pagination-controls>
-</div>
+
+
+  <p>
+      <button class="btn btn-primary"
+              ng-click="pageItems.page.setPage(1)"
+              ng-disabled="pageItems.currentPageNumber < 2">
+          <i class="glyphicon glyphicon-fast-backward"></i>
+      </button>
+
+      <button class="btn btn-primary"
+              ng-click="pageItems.page.prev()"
+              ng-disabled="!pageItems.page.hasPrev()">
+          <i class="glyphicon glyphicon-backward"></i>
+      </button>
+
+      <button class="btn btn-primary"
+              ng-click="pageItems.page.next()"
+              ng-disabled="!pageItems.page.hasNext()">
+          <i class="glyphicon glyphicon-forward"></i>
+      </button>
+
+      <button class="btn btn-primary"
+              ng-click="pageItems.page.setPage(pageItems.pageCount)"
+              ng-disabled="!pageItems.page.hasNext() || pageItems.currentPageNumber >= pageItems.pageCount">
+          <i class="glyphicon glyphicon-fast-forward"></i>
+      </button>
+    </p>
+
 </main>

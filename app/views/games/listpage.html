@@ -1,6 +1,12 @@
 <main>
+  <form class="form-inline">
+    <div class="form-group">
+        <label >Search</label>
+        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+    </div>
+</form>
   <p> Choose your game wisely </p>
-  <table ng-repeat="(key, group) in list.newGroup">
+  <table ng-repeat="(key, group) in list.newGroup ">
     <thead >
       <tr>
         <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
@@ -12,5 +18,7 @@
       </tr>
     </tbody>
   </table>
+
+
 
 </main>

@@ -9,54 +9,62 @@
       //    value: new Date(2013, 9, 22)
       //  };
         var firebaseSub = new Firebase(FIREBASE_URL);
+        var isNewGame = true;
         var authData = firebaseSub.getAuth();
         var games = firebaseSub.child('/newGroup');
-        var newGame = {
-          'groupName': '',
-          'date': '',
-          // 'time': '',
-          'location': '',
-          'style': '',
-          'game': '',
-          'state': '',
-          'age': '',
-          'system': '',
-          'description': '',
+
+        var newGroup = [];
+        var newGame =  {
           'user': '',
-          'timeStamp': ''
-
+          'date': '',
+          'state': '',
+          'timeStamp': '',
+          groupInfo: {
+            'groupName': '',
+            'time': '',
+            'location': '',
+            'style': '',
+            'game': '',
+            'age': '',
+            'system': '',
+            'description': ''
+          }
         };
+        // var partyGame = newGroup.push(games);
 
-var newDate = new Date()
+
+// var newDate = new Date()
 
 
         this.newGame = $firebaseArray(games);
-        console.log(newGame);
+        // console.log(partyGame);
         this.saveGroups = function() {
-          this.newGame.$add({
+          if (newGame && isNewGame) {
+          self.newGame.$add({
             user: authData.uid,
-            date: self.date,
-            state: self.state,
+            // date: self.date,
+            // state: self.state,
             timeStamp: Firebase.ServerValue.TIMESTAMP,
             groupInfo: {
-            groupName: self.groupName,
-
+            groupName: self.groupName
             // time: self.time ,
-            location: self.local,
-            style: self.style,
-            game: self.game,
-            age: self.age,
-            system: self.system,
-            description: self.description
+            // location: self.local,
+            // style: self.style,
+            // game: self.game,
+            // age: self.age,
+            // system: self.system,
+            // description: self.description
 }
 
-/// re-adjust datbase layout above...
-
-          });
-        };
 
 
-    }); //end .controller
+          })
+};
+};
+
+
+    });
+     //end .controller
 
 
 

@@ -14,7 +14,7 @@ var self = this;
 
 
 
-$http.get(FIREBASE_URL + '/newGroup.json').
+$http.get(FIREBASE_URL + '/newGroup' + '.json').
     success(function(data) {
       self.newGroup = data;
       console.log('success groups', data);

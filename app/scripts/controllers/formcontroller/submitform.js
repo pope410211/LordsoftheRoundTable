@@ -37,9 +37,9 @@
 // var newDate = new Date()
 
 
-        this.newGroup = $firebaseArray(games);
+        this.newGame = $firebaseArray(games);
         // console.log(partyGame);
-        this.newGame = newGroup.push(newGame);
+        // this.newGroup = newGroup.push(newGame);
   this.saveGroups = function() {
           self.newGame.$add({
             user: authData.uid,

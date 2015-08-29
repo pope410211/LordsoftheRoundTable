@@ -37,10 +37,10 @@
 // var newDate = new Date()
 
 
-        this.newGame = $firebaseArray(games);
+        this.newGroup = $firebaseArray(games);
         // console.log(partyGame);
-        this.saveGroups = function() {
-          if (newGame && isNewGame) {
+        this.newGame = newGroup.push(newGame);
+  this.saveGroups = function() {
           self.newGame.$add({
             user: authData.uid,
             // date: self.date,
@@ -56,14 +56,18 @@
             // system: self.system,
             description: self.description
 }
-
-
-
-          })
+          });
 };
-};
+//end var object.
 
-
+this.newGroup = [];
+// this.saveGroups = function(object){
+//
+//   self.newGroup.push(object)
+// }
+//
+// this.newGame = {};
+// console.log('it works');
     });
      //end .controller
 

@@ -45,7 +45,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controller: 'ListController',
         controllerAs: 'list'
       })
-      .state('detailPage',{
+      .state('detailPage', {
         url: '/detailPage/:gamedetailID',
         templateUrl: 'views/games/gamedetail.html',
         controller: 'ListController',
@@ -66,7 +66,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
 
   lotrt.config(function(RestangularProvider){
     RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com/');
-    RestangularProvider.setDefaultHeaders('');
+    RestangularProvider.setDefaultHeaders('Access-Control-Allow-Origin');
     //  RestangularProvider.setRequestSuffix('.json');
   });
 

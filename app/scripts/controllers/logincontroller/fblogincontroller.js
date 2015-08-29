@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function(FIREBASE_URL, $http){
+  .controller('LoginControllerFb', function(FIREBASE_URL){
 
 
     var firebaseFB = new Firebase(FIREBASE_URL);
@@ -54,27 +54,9 @@ function getName(authData) {
 
        });
      }
-    //  console.log('gots the data');
    }); //end newUser Auth
 
 
-// firebaseFB.onAuth(function(authData){
-//
-//
-//
-//    $http.get('https://graph.facebook.com/v2.4/me?access_token=' + authData.facebook.accessToken + '&fields=id,name,picture,age_range,birthday,location').
-//     success(function(data, status, headers, config) {
-//        // this callback will be called asynchronously
-//        // when the response is available
-//        console.log('yay', data, status, headers, config);
-//      }).
-//      error(function(data, status, headers, config) {
-//        console.log('boo', data, status, headers, config);
-//        // called asynchronously if an error occurs
-//        // or server returns response with an error status.
-//      });
-// });
-// token auth
 
 }); //end .controller('LoginController')
 

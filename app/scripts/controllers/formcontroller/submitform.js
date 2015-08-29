@@ -6,8 +6,8 @@
       console.log('inside the controller');
       var self = this;
       // var authData = firebaseSub.getAuth();
-      var group = Restangular.all('newGroup')
-      var firebaseSub = new Firebase(FIREBASE_URL);
+      var group = Restangular.all('newGroup');
+      // var firebaseSub = new Firebase(FIREBASE_URL);
       var newGame = {
                     //  user: authData.uid,
                      // date: self.date,

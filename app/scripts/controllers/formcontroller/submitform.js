@@ -11,7 +11,7 @@
       var newGame = {
                     //  user: authData.uid,
                      // date: self.date,
-                     // state: self.state,
+                     state: self.state,
                      timeStamp: Firebase.ServerValue.TIMESTAMP,
                      groupInfo: {
                      groupName: self.groupName,
@@ -23,6 +23,22 @@
                      // system: self.system,
                      description: self.description
          }
+                   };
+                   var newGame =  {
+                     'user': '',
+                     'date': '',
+                     'state': '',
+                     'timeStamp': '',
+                     groupInfo: {
+                       'groupName': '',
+                       'time': '',
+                       'location': '',
+                       'style': '',
+                       'game': '',
+                       'age': '',
+                       'system': '',
+                       'description': ''
+                     }
                    };
 
                     this.saveGroups = function(){
@@ -49,22 +65,22 @@
 //         var games = firebaseSub.child('/newGroup');
 //
 //         var newGroup = [];
-//         var newGame =  {
-//           'user': '',
-//           'date': '',
-//           'state': '',
-//           'timeStamp': '',
-//           groupInfo: {
-//             'groupName': '',
-//             'time': '',
-//             'location': '',
-//             'style': '',
-//             'game': '',
-//             'age': '',
-//             'system': '',
-//             'description': ''
-//           }
-//         };
+        // var newGame =  {
+        //   'user': '',
+        //   'date': '',
+        //   'state': '',
+        //   'timeStamp': '',
+        //   groupInfo: {
+        //     'groupName': '',
+        //     'time': '',
+        //     'location': '',
+        //     'style': '',
+        //     'game': '',
+        //     'age': '',
+        //     'system': '',
+        //     'description': ''
+        //   }
+        // };
 //         // var partyGame = newGroup.push(games);
 //
 //

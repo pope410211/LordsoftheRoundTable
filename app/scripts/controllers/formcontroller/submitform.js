@@ -5,45 +5,28 @@
     .controller('SubmitController', function(FIREBASE_URL, $firebaseArray, $stateParams, Restangular) {
       console.log('inside the controller');
       var self = this;
-      // var authData = firebaseSub.getAuth();
+      var firebaseSub = new Firebase(FIREBASE_URL);
+      var authData = firebaseSub.getAuth();
       var group = Restangular.all('newGroup');
-      // var firebaseSub = new Firebase(FIREBASE_URL);
-      var newGame = {
-                    //  user: authData.uid,
-                     // date: self.date,
-                     state: self.state,
-                     timeStamp: Firebase.ServerValue.TIMESTAMP,
-                     groupInfo: {
-                     groupName: self.groupName,
-                     // time: self.time ,
-                     // location: self.local,
-                     // style: self.style,
-                     // game: self.game,
-                     // age: self.age,
-                     // system: self.system,
-                     description: self.description
-         }
-                   };
-                   var newGame =  {
-                     'user': '',
-                     'date': '',
-                     'state': '',
-                     'timeStamp': '',
-                     groupInfo: {
-                       'groupName': '',
-                       'time': '',
-                       'location': '',
-                       'style': '',
-                       'game': '',
-                       'age': '',
-                       'system': '',
-                       'description': ''
-                     }
-                   };
+      var timestamp = new Date().getTime()
 
-                    this.saveGroups = function(){
-                        group.post(newGame);
-};
+
+      this.newGroup = [];
+      this.newGame = {
+        'user': authData.uid,
+        'date': '',
+        'state': '',
+        'timestamp': timestamp
+      };
+
+      this.saveGroups = function(){
+        console.log(self.newGroup);
+        group.post(self.newGame);
+
+        self.newGame= {};
+      }
+
+
 
 
 
@@ -66,20 +49,20 @@
 //
 //         var newGroup = [];
         // var newGame =  {
-        //   'user': '',
-        //   'date': '',
-        //   'state': '',
-        //   'timeStamp': '',
-        //   groupInfo: {
-        //     'groupName': '',
-        //     'time': '',
-        //     'location': '',
-        //     'style': '',
-        //     'game': '',
-        //     'age': '',
-        //     'system': '',
-        //     'description': ''
-        //   }
+          // 'user': '',
+          // 'date': '',
+          // 'state': '',
+          // 'timeStamp': '',
+          // groupInfo: {
+          //   'groupName': '',
+          //   'time': '',
+          //   'location': '',
+          //   'style': '',
+          //   'game': '',
+          //   'age': '',
+          //   'system': '',
+          //   'description': ''
+          // }
         // };
 //         // var partyGame = newGroup.push(games);
 //

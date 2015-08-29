@@ -1,22 +1,22 @@
 <!-- startgroup.html -->
 <main>
-  <form name="groupForm" ng-submit="party.saveGroups(groupForm)">
+  <form name="groupForm" ng-submit="submit.saveGroups(groupForm)">
     <div>
-      <label> Name Your Party</label>
-      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="party.groupName" required>
+      <label> Name Your Paty</label>
+      <input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="submit.newGame.groupName" required>
     </div>
     <div class=" col-xs-6 col-md-4">
       <ul>
         <li>
           <label> Date of Game</label>
-          <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="party.date">
+          <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="submit.newGame.date">
           <li>
             <label>Time of Game</label>
-            <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="party.time">
+            <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="submit.newGame.time">
           </li>
           <li>
             <label> Location of Game</label>
-            <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="party.local">
+            <input type="text" class="form-control color" id="loc" placeholder="Location" ng-model="submit.newGame.local">
           </li>
       </ul>
     </div>
@@ -24,7 +24,7 @@
       <ul>
         <label> Game Type </label>
         <li>
-          <select class="color" ng-model="party.style">
+          <select class="color" ng-model="submit.newGame.style">
             <option value="">---Please select---</option>
             <option value="">RPG </option>
             <option value="">CARD</option>
@@ -34,11 +34,11 @@
         </li>
         <li>
           <label> What Game </label>
-          <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="party.game">
+          <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="submit.newGame.game">
         </li>
         <label>State</label>
         <li>
-          <select class="color" ng-model="party.state">
+          <select class="color" ng-model="submit.newGame.state">
             <option value="" disabled selected>State</option>
             <option>AL</option>
             <option>AK</option>
@@ -95,7 +95,7 @@
         </li>
         <label>Age Group</label>
         <li>
-          <select class="color" ng-model="party.age">
+          <select class="color" ng-model="submit.newGame.age">
             <option value="" disabled selected>Select</option>
             <option>Any</option>
             <option>13+</option>
@@ -105,7 +105,7 @@
         </li>
         <label> Game System </label>
         <li>
-          <select class="color" ng-model="party.system">
+          <select class="color" ng-model="submit.newGame.system">
             <option value="" disabled selected>Select</option>
             <option>d20</option>
             <option>d6</option>
@@ -119,7 +119,7 @@
     <div class="col-xs-6 col-md-4">
       <fieldset class="form-group color">
         <label for="bio">Tell Us About Your Group</label>
-        <textarea class="form-control" id="tug" maxlength="500" ng-model="party.description"></textarea>
+        <textarea class="form-control" id="tug" maxlength="500" ng-model="submit.newGame.description"></textarea>
       </fieldset>
     </div>
     <div class="col-xs-6 col-sm-12 col-md-offset-5">

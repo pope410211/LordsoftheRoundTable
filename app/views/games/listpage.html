@@ -6,18 +6,22 @@
     </div>
 </form>
   <p> Choose your game wisely </p>
+
+  <div ng-repeat="(key, group) in list.newGroup">
   <a ui-sref="detailPage({gamedetailID: newGroup.$id})">
-  <table ng-repeat="(key, group) in list.newGroup">
+  <table >
+
     <thead >
       <tr>
-        <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
+        <th>{{group.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{group.groupInfo.location}} | {{group.groupInfo.game}}</td>
+        <td>{{group.local}} | {{group.game}}</td>
       </tr>
     </tbody>
   </table>
 </a>
+</div>
 </main>

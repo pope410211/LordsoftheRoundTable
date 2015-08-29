@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $firebaseArray, $stateParams, Restangular) {
+    .controller('SubmitController', function($state, FIREBASE_URL, $firebaseArray, $stateParams, Restangular) {
       console.log('inside the controller');
       var self = this;
       var firebaseSub = new Firebase(FIREBASE_URL);
@@ -13,9 +13,7 @@
 
       this.newGroup = [];
       this.newGame = {
-        'user': authData.uid,
-        'date': '',
-        'state': '',
+        'user': authData.uid.username,
         'timestamp': timestamp
       };
 
@@ -24,6 +22,7 @@
         group.post(self.newGame);
 
         self.newGame= {};
+        $state.go('findGame')
       }
 
 

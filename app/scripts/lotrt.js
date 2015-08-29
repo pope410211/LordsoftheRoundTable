@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'angularUtils.directives.dirPagination']);
+var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'angularUtils.directives.dirPagination', 'restangular']);
   lotrt.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -65,8 +65,8 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
   lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');
 
   lotrt.config(function(RestangularProvider){
-    RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com');
-     RestangularProvider.setRequestSuffix('.json');
+    RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com/');
+    //  RestangularProvider.setRequestSuffix('.json');
   });
 
 

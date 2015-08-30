@@ -19,7 +19,7 @@ console.log(self.game);
 this.comment = {}
 
 this.submitComments = function(){
-  Comments.new(self.comment, $stateParams.gameID);
+  group.put(self.comment, $stateParams.gameID);
         self.comment = {};
 };
 

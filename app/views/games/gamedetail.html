@@ -60,8 +60,9 @@
 <input ng-click="tell.submitComments()" type="submit" Submit>
 </form>
 
-<div ng-repeat="(key, comment) in tell.commentList">
+<div ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
   <ul>
+    <li><button ng-click="tell.deleteComment(key, comment)" type="delete">DELETE</button></li>
     <li> {{comment.name}}</li>
     <li> {{comment.comment}}</li>
   </ul>

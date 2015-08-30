@@ -7,7 +7,7 @@
 </form>
   <p> Choose your game wisely </p>
 
-  <div ng-repeat="list in list.groupList">
+  <div dir-paginate="list in list.groupList | filter: search | itemsPerPage: 20">
   <a ui-sref="#">
   <table >
 
@@ -24,4 +24,6 @@
   </table>
 </a>
 </div>
+
+<dir-pagination-controls></dir-pagination-controls>
 </main>

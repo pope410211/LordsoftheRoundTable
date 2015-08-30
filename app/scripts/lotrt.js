@@ -46,10 +46,10 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controllerAs: 'list'
       })
       .state('detailPage', {
-        url: '/detailPage/:gamedetailID',
+        url: '/Game-Detail/:gameID',
         templateUrl: 'views/games/gamedetail.html',
-        controller: 'ListController',
-        controllerAs: 'list'
+        controller: 'DetailController',
+        controllerAs: 'detail'
       })
       .state('404', {
         templateUrl: 'views/404.html'

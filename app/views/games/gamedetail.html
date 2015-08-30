@@ -1,20 +1,14 @@
 <main>
-  <form class="form-inline">
-    <div class="form-group">
-        <label >Search</label>
-        <input type="text" ng-model="search" class="form-control" placeholder="Search">
-    </div>
-</form>
   <p> Choose your game wisely </p>
   <table>
     <thead >
       <tr>
-        <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
+        <th>{{detail.game.groupName}} | {{detail.game.date | date: 'mediumDate'}} | {{detail.game.state}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{group.groupInfo.location}} | {{group.groupInfo.game}}</td>
+        <td>{{detail.game.location}} | {{detail.game.game}}</td>
       </tr>
     </tbody>
   </table>

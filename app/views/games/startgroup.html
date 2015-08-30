@@ -12,7 +12,7 @@
           <input type="date" class="form-control" id="DoE" placeholder="Date of Game" ng-model="submit.newGame.date">
           <li>
             <label>Time of Game</label>
-            <input type="time" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="submit.newGame.time">
+            <input type="text" class="form-control color" id="ToE" placeholder="Time of Game" ng-model="submit.newGame.time">
           </li>
           <li>
             <label> Location of Game</label>
@@ -24,8 +24,8 @@
       <ul>
         <label> Game Type </label>
         <li>
-          <select class="color" ng-model="submit.newGame.style">
-            <option value="">---Please select---</option>
+          <select class="color" ng-model="submit.newGame.type">
+            <option value="" disabled>---Please select---</option>
             <option value="">RPG </option>
             <option value="">CARD</option>
             <option value="">BOARD</option>
@@ -34,12 +34,12 @@
         </li>
         <li>
           <label> What Game </label>
-          <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="submit.newGame.game">
+          <input type="text" class="form-control color" id="LeGame" placeholder="THE GAME TO PLAY" ng-model="submit.newGame.game" required>
         </li>
         <label>State</label>
         <li>
           <select class="color" ng-model="submit.newGame.state">
-            <option value="" disabled selected>State</option>
+            <option value="" disabled>State</option>
             <option>AL</option>
             <option>AK</option>
             <option>AZ</option>
@@ -93,6 +93,10 @@
             <option>WY</option>
           </select>
         </li>
+        <label>City</label>
+        <li>
+          <input type="text" placeholder="City, Zipcode" ng-model="submit.newGame.city" required>
+        </li>
         <label>Age Group</label>
         <li>
           <select class="color" ng-model="submit.newGame.age">
@@ -103,23 +107,12 @@
             <option>21+</option>
           </select>
         </li>
-        <label> Game System </label>
-        <li>
-          <select class="color" ng-model="submit.newGame.system">
-            <option value="" disabled selected>Select</option>
-            <option>d20</option>
-            <option>d6</option>
-            <option>Story</option>
-            <option>SEIGE</option>
-            <option>SAGA</option>
-          </select>
-        </li>
       </ul>
     </div>
     <div class="col-xs-6 col-md-4">
       <fieldset class="form-group color">
         <label for="bio">Tell Us About Your Group</label>
-        <textarea class="form-control" id="tug" maxlength="500" ng-model="submit.newGame.description"></textarea>
+        <textarea class="form-control" id="tug" maxlength="500" ng-model="submit.newGame.description" required></textarea>
       </fieldset>
     </div>
     <div class="col-xs-6 col-sm-12 col-md-offset-5">

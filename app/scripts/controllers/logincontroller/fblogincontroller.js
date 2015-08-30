@@ -4,7 +4,7 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function(FIREBASE_URL){
+  .controller('LoginControllerFb', function(FIREBASE_URL, $state){
 
 
     var firebaseFB = new Firebase(FIREBASE_URL);
@@ -53,6 +53,7 @@ function getName(authData) {
 
 
        });
+       $state.go('myprofile')
      }
    }); //end newUser Auth
 

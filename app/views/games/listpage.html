@@ -7,7 +7,7 @@
 </form>
   <p> Choose your game wisely </p>
 
-  <div dir-paginate="list in list.groupList | filter: search | itemsPerPage: 20">
+  <div dir-paginate="list in list.groupList | filter: search | orderBy: '-timestamp' | itemsPerPage: 10">
   <a ui-sref="detailPage({gameID: list.$id})">
   <table >
 

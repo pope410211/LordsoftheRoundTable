@@ -15,7 +15,7 @@ self.game = games.plain();
 console.log(self.game);
 });
 
-console.log(group.get());
+
 
 
 
@@ -25,7 +25,6 @@ console.log(group.get());
 
   });
 // end controller
-
 
 })();
 

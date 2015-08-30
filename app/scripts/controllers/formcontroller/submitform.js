@@ -22,8 +22,7 @@
         console.log(self.newGroup);
         group.post(self.newGame);
 
-        self.newGame= {};
-        
+        self.newGame = {};
         $state.go('findGame');
       };
 

@@ -35,13 +35,21 @@
 // var key = gameList.key();
 //
 // console.log('the Key Master', key);
-      this.deleteComment = function(commentId){
-          Restangular.one('newGroup', $stateParams.gameID).one('comments', commentId)
-          .remove().then(function(){
-                console.log('delete all the things');
 
-            });
-};
+
+      this.deleteComment = function(id){
+        var deleteC = new Firebase(FIREBASE_URL + '/newGroup/' + $stateParams.gameID + '/comments/' + id );
+        deleteC.remove();
+      }
+
+
+      // this.deleteComment = function(commentId){
+      //     Restangular.one('newGroup', $stateParams.gameID).one('comments' )
+      //     .remove().then(function(){
+      //           console.log('delete all the things');
+      //
+      //       });
+// };
   });
 //end controller
 

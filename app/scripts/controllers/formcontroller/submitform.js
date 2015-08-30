@@ -8,7 +8,7 @@
       var firebaseSub = new Firebase(FIREBASE_URL);
       var authData = firebaseSub.getAuth();
       var group = Restangular.all('newGroup');
-      var timestamp = new Date().getTime()
+      var timestamp = new Date().getTime();
 
 
       this.newGroup = [];
@@ -22,9 +22,9 @@
         console.log(self.newGroup);
         group.post(self.newGame);
 
-        self.newGame= {};
-        $state.go('findGame')
-      }
+        self.newGame = {};
+        $state.go('findGame');
+      };
 
 
 

@@ -51,6 +51,12 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controller: 'DetailController',
         controllerAs: 'detail'
       })
+      .state('editPage', {
+        url: '/edit-Game/:gameID/:gameName',
+        templateUrl: 'views/games/editPage.html',
+        controller: 'EditController',
+        controllerAs: 'edit'
+      })
       .state('404', {
         templateUrl: 'views/404.html'
       });

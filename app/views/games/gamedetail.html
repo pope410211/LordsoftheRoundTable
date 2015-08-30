@@ -1,15 +1,59 @@
+<!-- startgroup.html -->
 <main>
-  <p> Choose your game wisely </p>
-  <table>
-    <thead >
-      <tr>
-        <th>{{detail.game.groupName}} | {{detail.game.date | date: 'mediumDate'}} | {{detail.game.state}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{detail.game.location}} | {{detail.game.game}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <form name="groupForm" ng-submit="submit.saveGroups(groupForm)">
+    <div>
+{{detail.game.groupName}}
+    </div>
+    <div class=" col-xs-6 col-md-4">
+      <ul>
+        <li>
+          <label> Players Needed / Total</label>
+        <p>  {{detail.game.playersneeded}} | {{}} </p>
+        <li>
+          <label> Date of Game</label>
+        <p>{{detail.game.date | date: 'mediumDate'}}</p>
+          <li>
+            <label>Time of Game</label>
+          <p>{{detail.game.time}}</p>
+          </li>
+          <li>
+            <label> Location of Game</label>
+          <p>{{detail.game.local}}</p>
+          </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <ul>
+        <label> Game Type </label>
+        <li>
+          <p>{{detail.game.type}}
+        </li>
+        <li>
+          <label> What Game </label>
+      <p> {{detail.game.game}}
+        </li>
+        <label>State</label>
+        <li>
+        <p>{{detail.game.state}}</p>
+
+        </li>
+        <label>City</label>
+        <li>
+          <p>{{detail.game.city}}</p>
+        </li>
+        <label>Age Group</label>
+        <li>
+        <p>{{detail.game.age}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <label for="bio">Group Info</label>
+      <p>{{detail.game.description}}</p>
+    </div>
+
+    <div class=" col-md-12 detail comments">
+      <input type="text" placeholder="Name">
+      <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!"></textarea>
+</div>
 </main>

@@ -35,7 +35,7 @@
     //  var commentorList = new Firebase(FIREBASE_URL + '/newGroup/' + $stateParams.gameID + '/comments');
     //  this.commentList = $firebaseArray(commentorList);
     //  console.log('yay', self.commentList);
-    
+
     $http.get(FIREBASE_URL + '/newGroup/' + $stateParams.gameID + '/comments' + '.json' ).
      success(function(data, status, headers, config) {
        self.commentList = data;

@@ -51,6 +51,9 @@
       <label for="bio">Group Info</label>
       <p>{{detail.game.description}}</p>
     </div>
+    <div>
+      <button ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>
+      </div>
     <div ng-controller="CommentCtrl as tell">
 <form name="commentForm" ng-submit="tell.submitComments(commentForm)">
     <div class=" col-md-12 detail comments">
@@ -60,8 +63,9 @@
 <input ng-click="tell.submitComments()" type="submit" Submit>
 </form>
 
-<div ng-repeat="(key, comment) in tell.commentList">
+<div ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
   <ul>
+    <li><button ng-click="tell.deleteComment(key)" type="delete">DELETE</button></li>
     <li> {{comment.name}}</li>
     <li> {{comment.comment}}</li>
   </ul>

@@ -20,11 +20,18 @@
     };
 
 
-    var self = this;
+
+
+    // group.getList().then(function(comment){
+    // self.comments = comment.plain();
+    // console.log(self.comments);
+    // });
+
+
      this.commentList = [ ];
-     var commentorList = new Firebase(FIREBASE_URL + '/newGroup' + '/comments');
+     var commentorList = new Firebase(FIREBASE_URL + '/newGroup' + $stateParams.gameID + '/comments');
      this.commentList = $firebaseArray(commentorList);
-     console.log(self.commentList);
+     console.log('yay', self.commentList);
 
 
 

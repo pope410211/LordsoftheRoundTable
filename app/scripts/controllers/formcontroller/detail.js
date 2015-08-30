@@ -19,10 +19,8 @@ console.log(self.game);
 this.comment = {}
 
 this.submitComments = function(){
-  group.post(self.comment, $stateParams.gameID);
-  console.log(this.submitComments);
-
-  self.comment = {};
+  Comments.new(self.comment, $stateParams.gameID);
+        self.comment = {};
 };
 
 
@@ -32,7 +30,6 @@ this.submitComments = function(){
 
   });
 // end controller
-
 
 })();
 

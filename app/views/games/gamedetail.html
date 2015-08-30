@@ -6,24 +6,16 @@
     </div>
 </form>
   <p> Choose your game wisely </p>
-
-  <div dir-paginate="list in list.groupList | filter: search | itemsPerPage: 20">
-  <a ui-sref="#">
-  <table >
-
+  <table>
     <thead >
       <tr>
-        <th>{{list.groupName}} | {{list.date | date: 'mediumDate'}} | {{list.state}}</th>
+        <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{list.local}} | {{list.game}}</td>
+        <td>{{group.groupInfo.location}} | {{group.groupInfo.game}}</td>
       </tr>
     </tbody>
   </table>
-</a>
-</div>
-
-<dir-pagination-controls></dir-pagination-controls>
 </main>

@@ -2,56 +2,36 @@
 (function() {
   'use strict';
   angular.module('lotrt')
-    .controller('SubmitController', function(FIREBASE_URL, $firebaseArray) {
+    .controller('SubmitController', function($state, FIREBASE_URL, $firebaseArray, $stateParams, Restangular) {
       console.log('inside the controller');
       var self = this;
-      // var date = this.date = {
-      //    value: new Date(2013, 9, 22)
-      //  };
-        var firebaseSub = new Firebase(FIREBASE_URL);
-        var authData = firebaseSub.getAuth();
-        var games = firebaseSub.child('/newGroup');
-        var newGame = {
-          'groupName': '',
-          'date': '',
-          // 'time': '',
-          'location': '',
-          'style': '',
-          'game': '',
-          'state': '',
-          'age': '',
-          'system': '',
-          'description': '',
-          'user': ''
-
-        };
-        this.newGame = $firebaseArray(games);
-        console.log(newGame);
-        this.saveGroups = function() {
-          this.newGame.$add({
-            user: authData.uid,
-            date: this.date,
-            state: self.state,
-            // timeStamp: this.stamp,
-            groupInfo: {
-            groupName: self.groupName,
-
-            // time: self.time ,
-            location: self.local,
-            style: self.style,
-            game: self.game,
-            age: self.age,
-            system: self.system,
-            description: self.description
-}
-
-/// re-adjust datbase layout above...
-
-          });
-        };
+      var firebaseSub = new Firebase(FIREBASE_URL);
+      var authData = firebaseSub.getAuth();
+      var group = Restangular.all('newGroup');
+      var timestamp = new Date().getTime();
 
 
-    }); //end .controller
+      this.newGroup = [];
+      this.newGame = {
+        'user': authData.facebook.displayName,
+        'timestamp': timestamp,
+        'uid': authData.uid
+      };
+
+      this.saveGroups = function(){
+        console.log(self.newGroup);
+        group.post(self.newGame);
+
+        self.newGame = {};
+        $state.go('findGame');
+      };
+
+
+
+
+
+    });
+     //end .controller
 
 
 

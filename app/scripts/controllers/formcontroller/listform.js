@@ -1,28 +1,24 @@
-/* global angular */
+/* global angular Firebase */
 
 
 (function(){
 'use strict';
 
 angular.module('lotrt')
-.controller('ListController', function(FIREBASE_URL, $http){
+.controller('ListController', function(FIREBASE_URL, $firebaseArray){
 
 var self = this;
-// var firebaseGroup = new firebaseGroup(FIREBASE_URL + '/newGroup');
+ this.groupList = [ ];
+ var gameList = new Firebase(FIREBASE_URL + '/newGroup');
+ this.groupList = $firebaseArray(gameList);
+ console.log(self.groupList);
 
-// var newID = newRef.name();
 
 
 
-$http.get(FIREBASE_URL + '/newGroup.json').
-    success(function(data) {
-      self.newGroup = data;
-      console.log('success groups', data);
-    }).
-    error(function(data) {
-      // log error
-      console.log('Failed groups', data);
-    });
+
+
+
 
 
 

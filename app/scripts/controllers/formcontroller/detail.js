@@ -15,8 +15,15 @@ self.game = games.plain();
 console.log(self.game);
 });
 
-console.log(group.get());
 
+this.comment = {}
+
+this.submitComments = function(){
+  group.post(self.comment, $stateParams.gameID);
+  console.log(this.submitComments);
+
+  self.comment = {};
+};
 
 
 

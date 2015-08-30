@@ -16,12 +16,7 @@ console.log(self.game);
 });
 
 
-this.comment = {}
 
-this.submitComments = function(){
-  group.put(self.comment, $stateParams.gameID);
-        self.comment = {};
-};
 
 
 

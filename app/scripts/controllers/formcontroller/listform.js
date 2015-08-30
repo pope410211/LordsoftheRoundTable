@@ -1,15 +1,15 @@
-/* global angular */
+/* global angular Firebase */
 
 
 (function(){
 'use strict';
 
 angular.module('lotrt')
-.controller('ListController', function(FIREBASE_URL,  $firebaseArray){
+.controller('ListController', function(FIREBASE_URL, $firebaseArray){
 
 var self = this;
  this.groupList = [ ];
- var gameList = new Firebase(FIREBASE_URL + '/newGroup')
+ var gameList = new Firebase(FIREBASE_URL + '/newGroup');
  this.groupList = $firebaseArray(gameList);
  console.log(self.groupList);
 

@@ -62,7 +62,7 @@
 
 <div ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
   <ul>
-    <li><button ng-click="tell.deleteComment(key, comment)" type="delete">DELETE</button></li>
+    <li><button ng-click="tell.deleteComment(id)" type="delete">DELETE</button></li>
     <li> {{comment.name}}</li>
     <li> {{comment.comment}}</li>
   </ul>

@@ -12,12 +12,14 @@
     var timestamp = new Date().getTime();
 
     this.comments = {
-      'name': authData.facebook.displayName,
-      'timestamp': timestamp
+      name: '' ,
+      timestamp: ''
     };
 
     this.submitComments = function(){
       console.log('work')
+      self.comments.name = authData.facebook.displayName,
+      self.comments.timestamp = timestamp
       group.post(self.comments);
 
             self.comments = {};
@@ -30,11 +32,13 @@
     this.commentList = $firebaseObject(gameList);
     console.log(self.commentList);
 
-
-      this.deleteComment = function(){
-
-          Restangular.one('newGroup', $stateParams.gameID).one('comments/').remove().then(function(){
-                console.log('deleted');
+// var key = gameList.key();
+//
+// console.log('the Key Master', key);
+      this.deleteComment = function(commentId){
+          Restangular.one('newGroup', $stateParams.gameID).one('comments', commentId)
+          .remove().then(function(){
+                console.log('delete all the things');
 
             });
 };

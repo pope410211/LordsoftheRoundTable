@@ -2,20 +2,29 @@
   'use strict';
 
   angular.module('lotrt')
-  .controller('CommentCtrl', function($stateParams, Restangular){
+  .controller('CommentCtrl', function($stateParams, Restangular, FIREBASE_URL, $firebaseArray){
 
-
-    var group = Restangular.one('newGroup', $stateParams.gameID);
+    console.log('in the comment control center');
+    var group = Restangular.one('newGroup', $stateParams.gameID).all('comments');
     var self = this;
+
+
     this.comments = {}
 
     this.submitComments = function(){
-      group.post(self.comments, $stateParams.gameID);
       console.log('work')
+      group.post(self.comments);
+
             self.comments = {};
 
     };
 
+
+    var self = this;
+     this.commentList = [ ];
+     var commentorList = new Firebase(FIREBASE_URL + '/newGroup' + '/comments');
+     this.commentList = $firebaseArray(commentorList);
+     console.log(self.commentList);
 
 
 

@@ -56,11 +56,12 @@
     <div class=" col-md-12 detail comments">
       <input type="text" placeholder="Name" ng-model="tell.comments.name">
       <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="tell.comments.comment"></textarea>
-      <input type="submit" Submit>
+
 </div>
+<input ng-click="tell.submitComments()" type="submit" Submit>
 </form>
 
-<div ng-repeat="tell in tell.comments">
+<div ng-repeat="tell in tell.commentList">
   <ul>
     <li> {{tell.comments.name}}</li>
     <li> {{tell.comments.comment}}</li>

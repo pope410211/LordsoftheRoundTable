@@ -51,19 +51,19 @@
       <label for="bio">Group Info</label>
       <p>{{detail.game.description}}</p>
     </div>
-    <div ng-controller="CommentCtrl as comment">
-<form name="commentForm" ng-submit="comment.submitComments(commentForm)">
+    <div ng-controller="CommentCtrl as tell">
+<form name="commentForm" ng-submit="tell.submitComments(commentForm)">
     <div class=" col-md-12 detail comments">
-      <input type="text" placeholder="Name" ng-model="detail.comments.name">
-      <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="comment.comments.comment"></textarea>
+      <input type="text" placeholder="Name" ng-model="tell.comments.name">
+      <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="tell.comments.comment"></textarea>
       <input type="submit" Submit>
 </div>
 </form>
 
-<div ng-repeat="detail in detail.comments">
+<div ng-repeat="tell in tell.comments">
   <ul>
-    <li> {{comment.comments.name}}</li>
-    <li> {{comment.comments.comment}}</li>
+    <li> {{tell.comments.name}}</li>
+    <li> {{tell.comments.comment}}</li>
   </ul>
 </div>
 </div>

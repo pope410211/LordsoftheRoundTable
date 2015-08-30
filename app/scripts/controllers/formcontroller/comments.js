@@ -2,17 +2,17 @@
   'use strict';
 
   angular.module('lotrt')
-  .controller('CommentCtrl', function($stateParams){
+  .controller('CommentCtrl', function($stateParams, Restangular){
 
 
     var group = Restangular.one('newGroup', $stateParams.gameID);
     var self = this;
-    this.comment = {}
+    this.comments = {}
 
     this.submitComments = function(){
-      group.put(self.comment, $stateParams.gameID);
+      group.post(self.comments, $stateParams.gameID);
       console.log('work')
-            self.comment = {};
+            self.comments = {};
 
     };
 

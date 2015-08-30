@@ -1,0 +1,56 @@
+
+<main>
+  <form name="Edit Form" >
+    <div>
+<input type="text" placeholder:"{{edit.game.groupName}}">
+    </div>
+    <div class=" col-xs-6 col-md-4">
+      <ul>
+        <li>
+          <label> Players Needed / Total</label>
+        <p>  {{}} of {{detail.game.players}} </p>
+        <li>
+          <label> Date of Game</label>
+        <p>{{detail.game.date | date: 'mediumDate'}}</p>
+          <li>
+            <label>Time of Game</label>
+          <p>{{detail.game.time}}</p>
+          </li>
+          <li>
+            <label> Location of Game</label>
+          <p>{{edit.game.local}}</p>
+          </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <ul>
+        <label> Game Type </label>
+        <li>
+          <p>{{detail.game.type}}
+        </li>
+        <li>
+          <label> What Game </label>
+      <p> {{detail.game.game}}
+        </li>
+        <label>State</label>
+        <li>
+        <p>{{detail.game.state}}</p>
+
+        </li>
+        <label>City</label>
+        <li>
+          <p>{{detail.game.city}}</p>
+        </li>
+        <label>Age Group</label>
+        <li>
+        <p>{{detail.game.age}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <label for="bio">Group Info</label>
+      <p>{{detail.game.description}}</p>
+    </div>
+    <div>
+      <button ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>
+      </div>

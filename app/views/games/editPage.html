@@ -1,0 +1,60 @@
+
+<main>
+  <form name="GroupEdit" ng-submit="edit.EditGroup(GroupEdit)">
+    <div>
+{{edit.game.groupName}}
+<input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="edit.editGame.groupName" ng-change>
+    </div>
+    <div class=" col-xs-6 col-md-4">
+      <ul>
+        <li>
+          <label> Players Needed / Total</label>
+        <p>  {{}} of {{edit.game.players}} </p>
+        <li>
+          <label> Date of Game</label>
+        <p>{{edit.game.date | date: 'mediumDate'}}</p>
+          <li>
+            <label>Time of Game</label>
+          <p>{{edit.game.time}}</p>
+          </li>
+          <li>
+            <label> Location of Game</label>
+          <p>{{edit.game.local}}</p>
+          </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <ul>
+        <label> Game Type </label>
+        <li>
+          <p>{{edit.game.type}}
+        </li>
+        <li>
+          <label> What Game </label>
+      <p> {{edit.game.game}}
+        </li>
+        <label>State</label>
+        <li>
+        <p>{{edit.game.state}}</p>
+
+        </li>
+        <label>City</label>
+        <li>
+          <p>{{edit.game.city}}</p>
+        </li>
+        <label>Age Group</label>
+        <li>
+        <p>{{edit.game.age}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <label for="bio">Group Info</label>
+      <p>{{edit.game.description}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-12 col-md-offset-5">
+      <button ng-click="edit.editGroup()">Submit Changes</button>
+    </div>
+    </form>
+
+</main>

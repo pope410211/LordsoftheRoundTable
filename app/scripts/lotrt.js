@@ -21,7 +21,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controllerAs: 'fblogin'
       })
       .state('myprofile', {
-        url: '/user/myprofile',
+        url: '/user/myprofile/:userID',
         templateUrl: 'views/user/profiles/profile.html',
         controller: 'profileController',
         controllerAs: 'profile'
@@ -46,10 +46,16 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controllerAs: 'list'
       })
       .state('detailPage', {
-        url: '/detailPage/:gamedetailID',
+        url: '/Game-Detail/:gameID/:gameName',
         templateUrl: 'views/games/gamedetail.html',
-        controller: 'ListController',
-        controllerAs: 'list'
+        controller: 'DetailController',
+        controllerAs: 'detail'
+      })
+      .state('editPage', {
+        url: '/edit-Game/:gameID',
+        templateUrl: 'views/games/editPage.html',
+        controller: 'EditController',
+        controllerAs: 'edit'
       })
       .state('404', {
         templateUrl: 'views/404.html'
@@ -62,10 +68,10 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
   $urlRouterProvider.when('', '/home');
   }); //ui.router
 
-  lotrt.constant('FIREBASE_URL', 'https://lotrttest.firebaseio.com');
+  lotrt.constant('FIREBASE_URL', 'https://lordsoftheroundtable.firebaseio.com');
 
   lotrt.config(function(RestangularProvider){
-    RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com/');
+    RestangularProvider.setBaseUrl('https://lordsoftheroundtable.firebaseio.com/');
      RestangularProvider.setRequestSuffix('.json');
   });
 

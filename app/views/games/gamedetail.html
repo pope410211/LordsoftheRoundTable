@@ -1,21 +1,75 @@
+
 <main>
-  <form class="form-inline">
-    <div class="form-group">
-        <label >Search</label>
-        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+  <form name="GroupMain">
+    <div>
+{{detail.game.groupName}}
     </div>
+    <div class=" col-xs-6 col-md-4">
+      <ul>
+        <li>
+          <label> Players Needed / Total</label>
+        <p>  {{}} of {{detail.game.players}} </p>
+        <li>
+          <label> Date of Game</label>
+        <p>{{detail.game.date | date: 'mediumDate'}}</p>
+          <li>
+            <label>Time of Game</label>
+          <p>{{detail.game.time}}</p>
+          </li>
+          <li>
+            <label> Location of Game</label>
+          <p>{{detail.game.local}}</p>
+          </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <ul>
+        <label> Game Type </label>
+        <li>
+          <p>{{detail.game.type}}
+        </li>
+        <li>
+          <label> What Game </label>
+      <p> {{detail.game.game}}
+        </li>
+        <label>State</label>
+        <li>
+        <p>{{detail.game.state}}</p>
+
+        </li>
+        <label>City</label>
+        <li>
+          <p>{{detail.game.city}}</p>
+        </li>
+        <label>Age Group</label>
+        <li>
+        <p>{{detail.game.age}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <label for="bio">Group Info</label>
+      <p>{{detail.game.description}}</p>
+    </div>
+    <div>
+      <button ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>
+      </div>
+    <div ng-controller="CommentCtrl as tell">
+<form name="commentForm" ng-submit="tell.submitComments(commentForm)">
+    <div class=" col-md-12 detail comments">
+      <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="tell.comments.comment"></textarea>
+
+</div>
+<input ng-click="tell.submitComments()" type="submit" Submit>
 </form>
-  <p> Choose your game wisely </p>
-  <table>
-    <thead >
-      <tr>
-        <th>{{group.groupInfo.groupName}} | {{group.date | date: 'mediumDate'}} | {{group.state}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{group.groupInfo.location}} | {{group.groupInfo.game}}</td>
-      </tr>
-    </tbody>
-  </table>
+
+<div ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
+  <ul>
+    <li><button ng-click="tell.deleteComment(key)" type="delete">DELETE</button></li>
+    <li> {{comment.name}}</li>
+    <li> {{comment.comment}}</li>
+  </ul>
+</div>
+</div>
+
 </main>

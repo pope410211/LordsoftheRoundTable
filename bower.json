@@ -15,7 +15,7 @@
     "chai": "~3.0.0",
     "mocha": "~2.2.5"
   },
-  "version": "0.1.3--choose-a-feat",
+  "version": "1.0.0-The-Adventure-Begins",
   "homepage": "https://github.com/pope410211/LordsoftheRoundTable",
   "authors": [
     "Nick Pope <pope410211@gmail.com>"

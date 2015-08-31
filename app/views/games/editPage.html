@@ -3,7 +3,7 @@
   <form name="GroupEdit" ng-submit="edit.EditGroup(GroupEdit)">
     <div>
 {{edit.game.groupName}}
-<input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="edit.editGame.groupName">
+<input type="text" class="form-control " id="GN" placeholder="Group Name" ng-model="edit.editGame.groupName" ng-change>
     </div>
     <div class=" col-xs-6 col-md-4">
       <ul>
@@ -53,7 +53,7 @@
       <p>{{edit.game.description}}</p>
     </div>
     <div class="col-xs-6 col-sm-12 col-md-offset-5">
-      <button ng-click="edit.editGame()">Submit Changes</button>
+      <button ng-click="edit.editGroup()">Submit Changes</button>
     </div>
     </form>
 

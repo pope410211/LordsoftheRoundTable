@@ -23,10 +23,10 @@ var timestamp = new Date().getTime();
 this.editGame = {
 };
 
-this.editGame = function(){
+this.editGroup = function(){
   console.log(self.editGame);
   // self.edit.timestamp = timestamp
-  group.patch(self.editGame);
+  group.put(self.editGame);
 console.log('yay');
   self.editGame = {};
   // $state.go('findGame');

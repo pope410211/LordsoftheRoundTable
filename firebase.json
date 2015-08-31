@@ -1,13 +1,6 @@
 {
-  "firebase": "lotrttest",
-  "headers": [ {
-    "source" : "**",
-    "headers" : [ {
-      "key" : "Access-Control-Allow-Origin",
-      "value" : "*"
-    } ]
-  } ],
-  "public": "./dist",
+  "firebase": "lordsoftheroundtable",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",

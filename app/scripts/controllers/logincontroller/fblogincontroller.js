@@ -53,7 +53,7 @@ function getName(authData) {
 
 
        });
-       $state.go('myprofile')
+       $state.go('myprofile');
      }
    }); //end newUser Auth
 

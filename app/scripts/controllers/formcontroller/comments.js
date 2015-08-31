@@ -1,3 +1,4 @@
+/* global Firebase angular */
 (function(){
   'use strict';
 
@@ -12,14 +13,14 @@
     var timestamp = new Date().getTime();
 
     this.comments = {
-      name: '' ,
+      name: '',
       timestamp: ''
     };
 
     this.submitComments = function(){
-      console.log('work')
-      self.comments.name = authData.facebook.displayName,
-      self.comments.timestamp = timestamp
+      console.log('work');
+      self.comments.name = authData.facebook.displayName;
+      self.comments.timestamp = timestamp;
       group.post(self.comments);
 
             self.comments = {};
@@ -40,7 +41,7 @@
       this.deleteComment = function(id){
         var deleteC = new Firebase(FIREBASE_URL + '/newGroup/' + $stateParams.gameID + '/comments/' + id );
         deleteC.remove();
-      }
+      };
 
 
       // this.deleteComment = function(commentId){

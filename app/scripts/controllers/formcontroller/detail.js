@@ -1,3 +1,5 @@
+/* global angular*/
+
 (function(){
   'use strict';
 
@@ -21,7 +23,7 @@ this.deleteGame = function(){
     Restangular.one('newGroup', $stateParams.gameID)
     .remove().then(function(){
           console.log('delete all the things');
-$state.go('findGame')
+$state.go('findGame');
       });
 };
 

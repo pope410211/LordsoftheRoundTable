@@ -1,0 +1,40 @@
+#game-list{
+
+
+h2 {
+  color: inherit;
+  text-align: center;
+}
+  a {
+    color: inherit;
+  }
+  .game-table {
+    // text-align: center;
+    font-size: 1.5em;
+
+
+
+  &:hover {
+
+    font-weight: bold;
+    text-decoration: underline;
+
+    }
+  }
+
+#sword-center{
+  text-align: center;
+
+
+}
+
+.page-ctrl{
+  align-content: center;
+}
+
+
+
+
+
+
+}// end #id

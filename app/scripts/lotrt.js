@@ -74,6 +74,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
     RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com/');
      RestangularProvider.setRequestSuffix('.json');
   });
+  
 
 
 

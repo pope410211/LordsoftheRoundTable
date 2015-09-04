@@ -43,7 +43,8 @@
       <li><a  ui-sref="findGame">FIND GROUP</a></li>
     </ul>
   </li>
-    <li ng-hide="lotrt.authData" role="presentation"><a ng-click="login.login()" ui-sref="loginFB">LOGIN</a></li>
+    <li ng-hide="fblogin.auth" role="presentation"><a ng-click="login.login()" ui-sref="loginFB">LOGIN</a></li>
+    <li  ng-show="fblogin.auth" role="presentation"><a>LOGOUT</a></li>
     <li role="presentation"><a  ui-sref="myprofile">PROFILE</a></li>
   </ul>
 </nav>

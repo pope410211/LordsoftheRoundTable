@@ -7,11 +7,11 @@
 angular.module('lotrt')
 .controller('ListController', function(FIREBASE_URL, $firebaseArray){
 
-var self = this;
+// var self = this;
  this.groupList = [ ];
  var gameList = new Firebase(FIREBASE_URL + '/newGroup');
  this.groupList = $firebaseArray(gameList);
- console.log(self.groupList);
+ // console.log(self.groupList);
 
 
 

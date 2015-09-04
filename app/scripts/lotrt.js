@@ -21,7 +21,7 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
         controllerAs: 'fblogin'
       })
       .state('myprofile', {
-        url: '/user/myprofile/:userID',
+        url: '/user/myprofile',
         templateUrl: 'views/user/profiles/profile.html',
         controller: 'profileController',
         controllerAs: 'profile'
@@ -74,7 +74,6 @@ var lotrt = angular.module('lotrt', ['ui.router', 'restangular', 'firebase', 'an
     RestangularProvider.setBaseUrl('https://lotrttest.firebaseio.com/');
      RestangularProvider.setRequestSuffix('.json');
   });
-
 
 
 

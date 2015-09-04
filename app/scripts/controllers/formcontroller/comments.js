@@ -5,7 +5,7 @@
   angular.module('lotrt')
   .controller('CommentCtrl', function($stateParams, Restangular, FIREBASE_URL, $firebaseObject){
 
-    console.log('in the comment control center');
+    // console.log('in the comment control center');
     var group = Restangular.one('newGroup', $stateParams.gameID).all('comments');
     var self = this;
     var firebaseAuth = new Firebase(FIREBASE_URL);
@@ -35,7 +35,7 @@
     this.commentList = [ ];
     var gameList = new Firebase(FIREBASE_URL + '/newGroup/' + $stateParams.gameID + '/comments');
     this.commentList = $firebaseObject(gameList);
-    console.log(self.commentList);
+    // console.log(self.commentList);
 
 // var key = gameList.key();
 //

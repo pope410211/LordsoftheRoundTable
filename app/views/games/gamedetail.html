@@ -1,24 +1,24 @@
 
 <main id="detail-page">
   <form name="GroupMain">
-    <div>
+    <div id="GroupName" class="detailed">
 {{detail.game.groupName}}
     </div>
     <div class=" col-xs-6 col-md-4">
       <ul>
         <li>
           <label> Players Needed / Total</label>
-        <p>  {{detail.game.players}} </p>
+        <p class="detailed">  {{detail.game.players}} </p>
         <li>
           <label> Date of Game</label>
-        <p>{{detail.game.date | date: 'mediumDate'}}</p>
+        <p class="detailed">{{detail.game.date | date: 'mediumDate'}}</p>
           <li>
             <label>Time of Game</label>
-          <p>{{detail.game.time}}</p>
+          <p class="detailed">{{detail.game.time}}</p>
           </li>
           <li>
             <label> Location of Game</label>
-          <p>{{detail.game.local}}</p>
+          <p class="detailed">{{detail.game.local}}</p>
           </li>
       </ul>
     </div>
@@ -26,7 +26,7 @@
       <ul>
         <label> Game Type </label>
         <li>
-          <p>{{detail.game.type}}
+          <p class="detailed">{{detail.game.type}}
         </li>
         <li>
           <label> What Game </label>
@@ -39,17 +39,17 @@
         </li>
         <label>City</label>
         <li>
-          <p>{{detail.game.city}}</p>
+          <p class="detailed">{{detail.game.city}}</p>
         </li>
         <label>Age Group</label>
         <li>
-        <p>{{detail.game.age}}</p>
+        <p class="detailed">{{detail.game.age}}</p>
         </li>
       </ul>
     </div>
     <div class="col-xs-6 col-md-4">
       <label for="bio">Group Info</label>
-      <p>{{detail.game.description}}</p>
+      <p class="detailed">{{detail.game.description}}</p>
     </div>
     <div>
       <button ng-show="authData.uid !== detail.game.uid" ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>

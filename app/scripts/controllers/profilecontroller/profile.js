@@ -15,10 +15,10 @@ var firebasePro = new Firebase(FIREBASE_URL);
         $scope.profile = data;
          // this callback will be called asynchronously
          // when the response is available
-         console.log('yay', data, status, headers, config);
+        //  console.log('yay', data, status, headers, config);
        }).
        error(function(data, status, headers, config) {
-         console.log('boo', data, status, headers, config);
+        //  console.log('boo', data, status, headers, config);
          // called asynchronously if an error occurs
          // or server returns response with an error status.
        });

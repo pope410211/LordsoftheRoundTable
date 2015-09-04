@@ -1,16 +1,15 @@
-<main>
+<main id="game-list" class="container-fluid">
   <form class="form-inline">
     <div class="form-group">
-        <label >Search</label>
         <input type="text" ng-model="search" class="form-control" placeholder="Search">
     </div>
 </form>
-  <p> Choose your game wisely </p>
 
-  <div dir-paginate="list in list.groupList | filter: search | orderBy: '-timestamp' | itemsPerPage: 10">
+  <h2> Choose your game wisely </h2>
+
+  <div class="game list" dir-paginate="list in list.groupList | filter: search | orderBy: '-timestamp' | itemsPerPage: 10">
   <a ui-sref="detailPage({gameID: list.$id, gameName: list.groupName})">
-  <table >
-
+  <table class="game-table">
     <thead >
       <tr>
         <th>{{list.groupName}} | {{list.date | date: 'mediumDate'}} | {{list.state}}</th>
@@ -22,8 +21,14 @@
       </tr>
     </tbody>
   </table>
+    <h3 id="sword-center">&#9876;</h3>
 </a>
 </div>
 
-<dir-pagination-controls></dir-pagination-controls>
+
 </main>
+<footer class="container-fluid">
+  <div class="container-fluid" id="pages">
+<dir-pagination-controls max-size="10" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+</div>
+</footer>

@@ -14,7 +14,7 @@ this.game = {};
 
 group.get().then(function(games){
 self.game = games.plain();
-console.log(self.game);
+// console.log(self.game);
 });
 
 
@@ -22,7 +22,7 @@ console.log(self.game);
 this.deleteGame = function(){
     Restangular.one('newGroup', $stateParams.gameID)
     .remove().then(function(){
-          console.log('delete all the things');
+          // console.log('delete all the things');
 $state.go('findGame');
       });
 };

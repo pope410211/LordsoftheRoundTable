@@ -6,16 +6,18 @@
 
   .controller('LoginControllerFb', function(FIREBASE_URL, $state){
 
-
     var firebaseFB = new Firebase(FIREBASE_URL);
 
+    // var fire = $firebaseAuth(firebaseFB);
 
-firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
+  // this.auth = authData;
+
+firebaseFB.authWithOAuthPopup('facebook', function(error) {
   if (error) {
-    console.log('Login Failed!', error);
+    // console.log('Login Failed!', error);
   } else {
     // the access token will allow us to make Open Graph API calls
-    console.log('this is token', authData.facebook.accessToken);
+    // console.log('this is token', authData.facebook.accessToken);
   }
 }, {
   remember: 'sessionOnly',
@@ -26,9 +28,9 @@ firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
 
 function authDataCallback(authData) {
   if (authData) {
-    console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
+    // console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
   } else {
-    console.log('User is logged out');
+    // console.log('User is logged out');
   }
 }
 firebaseFB.onAuth(authDataCallback);

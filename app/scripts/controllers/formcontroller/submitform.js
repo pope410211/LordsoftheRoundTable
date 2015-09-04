@@ -19,7 +19,7 @@
       };
 
       this.saveGroups = function(){
-        console.log(self.newGroup);
+        // console.log(self.newGroup);
         group.post(self.newGame);
 
         self.newGame = {};

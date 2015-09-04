@@ -1,5 +1,5 @@
 
-<main>
+<main id="detail-page">
   <form name="GroupMain">
     <div>
 {{detail.game.groupName}}
@@ -54,16 +54,15 @@
     <div>
       <button ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>
       </div>
-    <div ng-controller="CommentCtrl as tell">
+      </main>
+    <div ng-controller="CommentCtrl as tell" class="col-md-12">
 <form name="commentForm" ng-submit="tell.submitComments(commentForm)">
     <div class=" col-md-12 detail comments">
-      <textarea id="tug" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="tell.comments.comment"></textarea>
-
+      <textarea id="comment-area" class="comment-area" maxlength="300" placeholder="Let them know you want to join the group!" ng-model="tell.comments.comment"></textarea>
 </div>
 <input ng-click="tell.submitComments()" type="submit" Submit>
 </form>
-
-<div ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
+<div class="comment-list" ng-repeat="(key, comment) in tell.commentList | orderBy: '-timestamp'">
   <ul>
     <li><button ng-click="tell.deleteComment(key)" type="delete">DELETE</button></li>
     <li> {{comment.name}}</li>
@@ -71,5 +70,3 @@
   </ul>
 </div>
 </div>
-
-</main>

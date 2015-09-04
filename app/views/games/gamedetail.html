@@ -4,6 +4,7 @@
     <div id="GroupName" class="detailed">
 {{detail.game.groupName}}
     </div>
+    <div id="package">
     <div class=" col-xs-6 col-md-4">
       <ul>
         <li>
@@ -30,11 +31,11 @@
         </li>
         <li>
           <label> What Game </label>
-      <p> {{detail.game.game}}
+      <p class="detailed"> {{detail.game.game}}
         </li>
         <label>State</label>
         <li>
-        <p>{{detail.game.state}}</p>
+        <p class="detailed">{{detail.game.state}}</p>
 
         </li>
         <label>City</label>
@@ -51,6 +52,7 @@
       <label for="bio">Group Info</label>
       <p class="detailed">{{detail.game.description}}</p>
     </div>
+  </div>
     <div>
       <button ng-show="authData.uid !== detail.game.uid" ng-click="detail.deleteGame(gameID)" type="delete">DELETE</button>
       </div>

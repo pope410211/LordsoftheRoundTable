@@ -1,14 +1,19 @@
-#game-list{
+#game-list {
 
 
 h2 {
   color: inherit;
   text-align: center;
+  margin-bottom: 1em;
+
 }
   a {
     color: inherit;
   }
+
   .game-table {
+    margin: 0 auto;
+    position: relative;
     // text-align: center;
     font-size: 1.5em;
 
@@ -23,14 +28,12 @@ h2 {
   }
 
 #sword-center{
+
   text-align: center;
 
 
 }
 
-.page-ctrl{
-  align-content: center;
-}
 
 
 
@@ -38,3 +41,12 @@ h2 {
 
 
 }// end #id
+
+footer {
+
+
+#pages {
+  margin-top: 10em;
+  margin-left: 23em;
+ }
+}

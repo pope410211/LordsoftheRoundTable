@@ -4,15 +4,15 @@
 
   angular.module('lotrt')
 
-  .controller('LoginControllerFb', function(FIREBASE_URL, $state, $firebaseAuth){
+  .controller('LoginControllerFb', function(FIREBASE_URL, $state){
 
     var firebaseFB = new Firebase(FIREBASE_URL);
 
-    var fire = $firebaseAuth(firebaseFB);
+    // var fire = $firebaseAuth(firebaseFB);
 
-  this.auth = authData;
+  // this.auth = authData;
 
-firebaseFB.authWithOAuthPopup('facebook', function(error, authData) {
+firebaseFB.authWithOAuthPopup('facebook', function(error) {
   if (error) {
     // console.log('Login Failed!', error);
   } else {

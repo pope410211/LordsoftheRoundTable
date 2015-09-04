@@ -11,17 +11,21 @@
     var firebaseAuth = new Firebase(FIREBASE_URL);
     var authData = firebaseAuth.getAuth();
     var timestamp = new Date().getTime();
+    var uid = authData.uid;
 
     this.comments = {
       name: '',
-      timestamp: ''
+      timestamp: '',
+      id: ''
     };
 
     this.submitComments = function(){
-      console.log('work');
+
       self.comments.name = authData.facebook.displayName;
       self.comments.timestamp = timestamp;
+      self.comments.id = uid;
       group.post(self.comments);
+        console.log('work', self.comments);
 
             self.comments = {};
 

@@ -27,7 +27,7 @@
   <body>
 
 
-<main class="container-fluid">
+<main class="container-fluid" ng-contoller="LoginControllerFB as fblogin">
 <div id="logo1">
   <a  ui-sref="home"><img src="/images/lotrt-gold.png" class="goldlogo"/></a>
   </div>
@@ -43,7 +43,7 @@
       <li><a  ui-sref="findGame">FIND GROUP</a></li>
     </ul>
   </li>
-    <li role="presentation"><a  ui-sref="login">LOGIN</a></li>
+    <li ng-hide="lotrt.authData" role="presentation"><a ng-click="login.login()" ui-sref="loginFB">LOGIN</a></li>
     <li role="presentation"><a  ui-sref="myprofile">PROFILE</a></li>
   </ul>
 </nav>

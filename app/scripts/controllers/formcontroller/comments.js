@@ -25,7 +25,7 @@
       self.comments.timestamp = timestamp;
       self.comments.id = uid;
       group.post(self.comments);
-        console.log('work', self.comments);
+        // console.log('work', self.comments);
 
             self.comments = {};
 
